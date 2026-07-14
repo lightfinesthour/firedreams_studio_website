@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Firedreams Studio, handcrafted games and apps</title>
+<meta name="description" content="Firedreams Studio is a one-person indie studio crafting story-rich games and beautifully polished mobile apps. Home of Demon At The Door, Bubble Level and Flags of the World." />
+<link rel="canonical" href="https://firedreams.studio/" />
+<meta property="og:site_name" content="Firedreams Studio" />
+<meta property="og:title" content="Firedreams Studio" />
+<meta property="og:description" content="A one-person indie studio crafting story-rich games and beautifully polished mobile apps." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://firedreams.studio/" />
+<meta property="og:image" content="https://firedreams.studio/assets/img/og_image.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="theme-color" content="#06080f" />
+<link rel="icon" type="image/png" sizes="64x64" href="assets/img/favicon-64.png" />
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Firedreams Studio",
+  "url": "https://firedreams.studio/",
+  "logo": "https://firedreams.studio/assets/img/apple-touch-icon.png",
+  "description": "A one-person indie studio crafting story-rich games and polished mobile apps.",
+  "sameAs": ["https://demonatthedoor.com/"]
+}
+</script>
+<style>
+/* ============ base ============ */
+:root {
+  --bg: #06080f;
+  --bg-2: #0a0f1d;
+  --panel: #0e1426;
+  --panel-2: #121a30;
+  --line: rgba(148, 163, 210, 0.14);
+  --ink: #eef1fa;
+  --muted: #9aa5c2;
+  --faint: #6b7694;
+  --ember-1: #ffb650;
+  --ember-2: #ff6a3a;
+  --ember-3: #ff3d81;
+  --violet: #8f7bff;
+  --violet-soft: rgba(143, 123, 255, 0.16);
+  --ember-grad: linear-gradient(100deg, var(--ember-1), var(--ember-2) 45%, var(--ember-3));
+  --radius: 22px;
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.65;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+img, video { max-width: 100%; display: block; }
+img { height: auto; }
+a { color: inherit; }
+::selection { background: rgba(255, 106, 58, 0.35); }
+
+h1, h2, h3 { font-family: var(--font-display); font-weight: 500; line-height: 1.08; letter-spacing: -0.01em; }
+
+.wrap { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+
+.eyebrow {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-size: 12.5px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--ember-1);
+}
+.eyebrow::before { content: ""; width: 26px; height: 1px; background: var(--ember-2); }
+
+.grad-text {
+  background: var(--ember-grad);
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent; color: transparent;
+}
+
+.chip {
+  display: inline-flex; align-items: center; gap: 7px;
+  padding: 5px 13px; border-radius: 999px;
+  font-size: 12.5px; font-weight: 600; letter-spacing: 0.04em;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--muted);
+  white-space: nowrap;
+}
+.chip .dot { width: 7px; height: 7px; border-radius: 50%; }
+.dot.live { background: #ffb650; box-shadow: 0 0 10px #ff6a3a; animation: pulse 2.2s infinite; }
+.dot.next { background: var(--violet); box-shadow: 0 0 10px var(--violet); }
+.dot.concept { background: #56dcb2; box-shadow: 0 0 10px #56dcb2; }
+@keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.35; } }
+
+.btn {
+  display: inline-flex; align-items: center; gap: 9px;
+  padding: 14px 26px; border-radius: 14px;
+  font-weight: 600; font-size: 15.5px; text-decoration: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease, border-color 0.25s ease;
+}
+.btn-fire {
+  background: var(--ember-grad);
+  color: #170a06;
+  box-shadow: 0 8px 30px rgba(255, 106, 58, 0.35);
+}
+.btn-fire:hover { transform: translateY(-2px); box-shadow: 0 14px 40px rgba(255, 106, 58, 0.5); }
+.btn-ghost {
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--ink);
+  backdrop-filter: blur(6px);
+}
+.btn-ghost:hover { transform: translateY(-2px); border-color: rgba(255, 182, 80, 0.5); background: rgba(255, 255, 255, 0.07); }
+.btn svg { flex: none; }
+
+/* reveal on scroll (hidden state only when JS is running) */
+.reveal { transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.22, 1, 0.36, 1); }
+html.js .reveal { opacity: 0; transform: translateY(28px); }
+html.js .reveal.in { opacity: 1; transform: none; }
+.reveal.d1 { transition-delay: 0.1s; } .reveal.d2 { transition-delay: 0.2s; } .reveal.d3 { transition-delay: 0.3s; }
+
+/* ============ nav ============ */
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 50;
+  transition: background 0.4s ease, border-color 0.4s ease;
+  border-bottom: 1px solid transparent;
+}
+.nav.scrolled { background: rgba(6, 8, 15, 0.78); backdrop-filter: blur(14px); border-bottom-color: var(--line); }
+.nav-inner { display: flex; align-items: center; justify-content: space-between; height: 68px; }
+.brand { display: flex; align-items: center; gap: 11px; text-decoration: none; font-weight: 700; font-size: 16.5px; letter-spacing: 0.01em; }
+.brand .flame { width: 26px; height: 26px; }
+.nav-links { display: flex; align-items: center; gap: 30px; }
+.nav-links a { text-decoration: none; font-size: 14.5px; font-weight: 500; color: var(--muted); transition: color 0.2s; }
+.nav-links a:hover { color: var(--ink); }
+.nav-links .nav-cta {
+  color: var(--ink); padding: 9px 18px; border-radius: 11px;
+  border: 1px solid rgba(255, 106, 58, 0.45); background: rgba(255, 106, 58, 0.1);
+  transition: background 0.2s, border-color 0.2s;
+}
+.nav-links .nav-cta:hover { background: rgba(255, 106, 58, 0.2); border-color: rgba(255, 106, 58, 0.8); }
+@media (max-width: 720px) { .nav-links a:not(.nav-cta) { display: none; } }
+
+/* ============ hero ============ */
+.hero { position: relative; min-height: 100svh; display: flex; align-items: center; overflow: hidden; }
+.hero video, .hero .poster {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  object-fit: cover; object-position: center 62%;
+}
+.hero .veil {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(120% 90% at 50% 105%, rgba(255, 106, 58, 0.18), transparent 55%),
+    linear-gradient(180deg, rgba(6, 8, 15, 0.68) 0%, rgba(8, 11, 24, 0.45) 45%, rgba(6, 8, 15, 0.94) 100%),
+    linear-gradient(115deg, rgba(19, 15, 48, 0.55), rgba(6, 8, 15, 0.1) 60%);
+}
+#embers { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+.hero-content { position: relative; z-index: 2; padding: 140px 0 120px; max-width: 780px; }
+.hero h1 {
+  font-size: clamp(46px, 7.4vw, 92px);
+  font-weight: 400;
+  margin: 22px 0 26px;
+  text-shadow: 0 4px 40px rgba(0, 0, 0, 0.55);
+}
+.hero h1 em { font-style: italic; font-weight: 300; }
+.hero p.lede { font-size: clamp(17px, 2vw, 20px); color: #c6cde2; max-width: 560px; text-shadow: 0 2px 18px rgba(0, 0, 0, 0.6); }
+.hero-ctas { display: flex; gap: 14px; margin-top: 38px; flex-wrap: wrap; }
+.scroll-hint {
+  position: absolute; bottom: 26px; left: 50%; transform: translateX(-50%);
+  z-index: 2; color: var(--faint); font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase;
+  display: flex; flex-direction: column; align-items: center; gap: 8px; text-decoration: none;
+}
+.scroll-hint span.line { width: 1px; height: 34px; background: linear-gradient(var(--ember-2), transparent); animation: drip 2s infinite; }
+@keyframes drip { 0% { transform: scaleY(0); transform-origin: top; } 60% { transform: scaleY(1); } 100% { opacity: 0; transform: scaleY(1); } }
+
+/* ============ sections ============ */
+section { position: relative; }
+.section-pad { padding: 110px 0; }
+.section-head { max-width: 720px; margin-bottom: 60px; }
+.section-head h2 { font-size: clamp(32px, 4.6vw, 52px); margin: 18px 0 16px; }
+.section-head p { color: var(--muted); font-size: 17.5px; }
+
+/* ============ demon at the door ============ */
+#datd {
+  background:
+    radial-gradient(90% 70% at 85% 20%, rgba(143, 123, 255, 0.09), transparent 60%),
+    radial-gradient(70% 60% at 10% 90%, rgba(255, 61, 129, 0.07), transparent 60%),
+    var(--bg-2);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.datd-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 70px; align-items: center; }
+@media (max-width: 880px) { .datd-grid { grid-template-columns: 1fr; gap: 50px; } }
+.datd-copy h2 { font-size: clamp(38px, 5vw, 60px); margin: 18px 0 20px; }
+.datd-copy p { color: var(--muted); margin-bottom: 16px; max-width: 520px; }
+.datd-chips { display: flex; gap: 10px; flex-wrap: wrap; margin: 22px 0 30px; }
+.chip.adult { border-color: rgba(255, 61, 129, 0.5); color: #ff8ab4; background: rgba(255, 61, 129, 0.09); }
+
+.progress-block { max-width: 420px; margin-bottom: 34px; }
+.progress-label { display: flex; justify-content: space-between; font-size: 13px; font-weight: 600; color: var(--faint); margin-bottom: 9px; letter-spacing: 0.05em; }
+.progress-label b { color: var(--ember-1); }
+.progress-track { height: 9px; border-radius: 99px; background: rgba(255, 255, 255, 0.07); overflow: hidden; border: 1px solid var(--line); }
+.progress-fill {
+  height: 100%; width: 0; border-radius: 99px;
+  background: var(--ember-grad);
+  box-shadow: 0 0 16px rgba(255, 106, 58, 0.7);
+  transition: width 1.6s cubic-bezier(0.22, 1, 0.36, 1);
+  position: relative;
+}
+.progress-fill::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(100deg, transparent 20%, rgba(255,255,255,0.55) 50%, transparent 80%);
+  animation: shimmer 2.6s infinite; opacity: 0.6;
+}
+@keyframes shimmer { from { transform: translateX(-100%); } to { transform: translateX(100%); } }
+.progress-note { font-size: 13px; color: var(--faint); margin-top: 10px; }
+html:not(.js) .progress-fill { width: 15%; }
+
+/* the door */
+.door-stage { display: flex; justify-content: center; perspective: 900px; }
+.door-scene {
+  position: relative; width: min(330px, 80vw); aspect-ratio: 33 / 43;
+  display: flex; align-items: flex-end; justify-content: center;
+}
+.door-glow {
+  position: absolute; inset: -14%;
+  background: radial-gradient(45% 42% at 50% 55%, rgba(143, 123, 255, 0.22), transparent 70%);
+  filter: blur(6px);
+  animation: breathe 5.5s ease-in-out infinite;
+}
+@keyframes breathe { 0%,100% { opacity: 0.7; } 50% { opacity: 1; } }
+.door {
+  position: relative; width: 62%; height: 88%;
+  border-radius: 46% 46% 10px 10px / 30% 30% 10px 10px;
+  background: linear-gradient(180deg, #131a30, #0b101f 70%);
+  border: 1px solid rgba(148, 163, 210, 0.22);
+  box-shadow:
+    inset 0 0 0 8px #080c18,
+    inset 0 0 0 9px rgba(148, 163, 210, 0.16),
+    0 30px 60px rgba(0, 0, 0, 0.6);
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.door-scene:hover .door { transform: rotateY(7deg) scale(1.015); }
+.door .crack {
+  position: absolute; top: 7%; bottom: 3%; left: 50%; width: 3px; transform: translateX(-50%);
+  background: linear-gradient(180deg, var(--violet), var(--ember-2) 55%, var(--ember-1));
+  filter: blur(0.6px);
+  box-shadow: 0 0 22px 5px rgba(255, 106, 58, 0.55), 0 0 60px 14px rgba(143, 123, 255, 0.3);
+  animation: crackle 4s ease-in-out infinite;
+  transition: width 0.6s ease;
+}
+.door-scene:hover .crack { width: 7px; }
+@keyframes crackle { 0%,100% { opacity: 0.85; } 42% { opacity: 1; } 58% { opacity: 0.7; } }
+.door .knob {
+  position: absolute; top: 54%; left: 17%;
+  width: 11px; height: 11px; border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #ffd9a0, #a8642e 70%);
+  box-shadow: 0 0 10px rgba(255, 182, 80, 0.5);
+}
+.eyes {
+  position: absolute; top: 26%; left: 50%; transform: translateX(-50%);
+  display: flex; gap: 13px; opacity: 0;
+  animation: peek 9s infinite;
+}
+.eyes i {
+  width: 7px; height: 9px; border-radius: 50% 50% 45% 45%;
+  background: #ffde6b; box-shadow: 0 0 12px 3px rgba(255, 200, 60, 0.8);
+}
+@keyframes peek {
+  0%, 55% { opacity: 0; }
+  60%, 76% { opacity: 1; }
+  66% { opacity: 0.1; }  /* blink */
+  80%, 100% { opacity: 0; }
+}
+.door-light {
+  position: absolute; bottom: -2%; left: 50%; transform: translateX(-50%);
+  width: 120%; height: 16%;
+  background: radial-gradient(50% 100% at 50% 0%, rgba(255, 140, 70, 0.33), transparent 75%);
+  filter: blur(4px);
+}
+.door-caption { text-align: center; margin-top: 26px; font-size: 13px; color: var(--faint); font-style: italic; }
+
+/* ============ mobile ============ */
+.cards { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; }
+@media (max-width: 880px) { .cards { grid-template-columns: 1fr; } }
+.card {
+  position: relative; overflow: hidden;
+  background: linear-gradient(165deg, var(--panel-2), var(--panel) 60%);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 40px 38px 0;
+  display: flex; flex-direction: column;
+  transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+}
+.card:hover { transform: translateY(-5px); border-color: rgba(255, 182, 80, 0.35); box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45); }
+.card-top { display: flex; align-items: center; gap: 16px; margin-bottom: 18px; flex-wrap: wrap; }
+.app-icon { width: 58px; height: 58px; border-radius: 14px; box-shadow: 0 8px 22px rgba(0,0,0,0.5); border: 1px solid var(--line); }
+.card h3 { font-size: 27px; }
+.card .platform { font-size: 12.5px; color: var(--faint); letter-spacing: 0.12em; text-transform: uppercase; font-weight: 600; margin-top: 3px; }
+.card p { color: var(--muted); font-size: 15.5px; margin-bottom: 14px; }
+.card .chip { margin-left: auto; }
+.card-visual { margin-top: auto; }
+
+/* phone mockups */
+.phones { position: relative; height: 300px; margin-top: 26px; }
+.phone {
+  position: absolute; bottom: -60px; width: 168px;
+  border-radius: 26px; padding: 9px;
+  background: #1a2138;
+  border: 1px solid rgba(148, 163, 210, 0.3);
+  box-shadow: 0 26px 60px rgba(0, 0, 0, 0.6);
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.phone img { border-radius: 18px; }
+.phone.front { left: 50%; transform: translateX(-78%) rotate(-4deg); z-index: 2; }
+.phone.back  { left: 50%; transform: translateX(-14%) rotate(6deg) scale(0.94); opacity: 0.92; }
+.card:hover .phone.front { transform: translateX(-78%) rotate(-6deg) translateY(-10px); }
+.card:hover .phone.back  { transform: translateX(-14%) rotate(8deg) scale(0.94) translateY(-6px); }
+
+/* flags visual */
+.flag-board { position: relative; height: 300px; margin-top: 26px; overflow: hidden; }
+.flag-grid {
+  position: absolute; inset: 24px -10px -40px;
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;
+  transform: rotate(-5deg);
+}
+.flag-tile {
+  border-radius: 9px; overflow: hidden;
+  border: 1px solid rgba(148, 163, 210, 0.25);
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.45);
+  transition: transform 0.35s ease;
+  aspect-ratio: 3 / 2;
+}
+.flag-tile img { width: 100%; height: 100%; object-fit: cover; }
+.flag-tile:nth-child(odd) { transform: translateY(10px); }
+.card:hover .flag-tile:nth-child(odd) { transform: translateY(2px); }
+.card:hover .flag-tile:nth-child(even) { transform: translateY(-6px); }
+.hiscore {
+  position: absolute; top: 8px; right: 6px; z-index: 2;
+  font-family: var(--font-display); font-style: italic; font-size: 15px;
+  padding: 8px 16px; border-radius: 12px;
+  background: rgba(6, 8, 15, 0.82); border: 1px solid rgba(255, 182, 80, 0.4);
+  color: var(--ember-1); backdrop-filter: blur(4px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* ============ concept lab ============ */
+.lab {
+  border: 1px dashed rgba(86, 220, 178, 0.35);
+  border-radius: var(--radius);
+  background:
+    radial-gradient(60% 100% at 100% 0%, rgba(86, 220, 178, 0.06), transparent 60%),
+    var(--panel);
+  padding: 46px 44px;
+  display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: center;
+  position: relative; overflow: hidden;
+}
+@media (max-width: 760px) { .lab { grid-template-columns: 1fr; } .lab-art { width: 100%; max-width: 380px; margin: 12px auto 0; } }
+.lab h3 { font-size: 30px; margin: 14px 0 12px; }
+.lab p { color: var(--muted); font-size: 15.5px; max-width: 480px; }
+.lab .stamp {
+  position: absolute; top: 22px; right: -34px; transform: rotate(35deg);
+  font-size: 11px; font-weight: 700; letter-spacing: 0.3em; text-transform: uppercase;
+  color: rgba(86, 220, 178, 0.75); border: 1px solid rgba(86, 220, 178, 0.4);
+  padding: 5px 40px; background: rgba(86, 220, 178, 0.07);
+}
+.lab-art { position: relative; width: 330px; transform: rotate(2.5deg); transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1); }
+.lab-art img {
+  border-radius: 12px;
+  border: 1px solid rgba(148, 163, 210, 0.28);
+  box-shadow: 0 22px 50px rgba(0, 0, 0, 0.55);
+}
+.lab:hover .lab-art { transform: rotate(0.5deg) scale(1.02); }
+.lab-art::before, .lab-art::after {
+  content: ""; position: absolute; top: -11px; width: 72px; height: 24px;
+  background: rgba(220, 240, 235, 0.16);
+  border: 1px solid rgba(220, 240, 235, 0.12);
+  backdrop-filter: blur(2px);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+}
+.lab-art::before { left: -18px; transform: rotate(-38deg); }
+.lab-art::after { right: -18px; transform: rotate(38deg); }
+.lab-art figcaption { text-align: center; margin-top: 16px; font-size: 12.5px; color: var(--faint); font-style: italic; }
+
+/* ============ about ============ */
+#about { background: var(--bg-2); border-top: 1px solid var(--line); }
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 70px; align-items: center; }
+@media (max-width: 880px) { .about-grid { grid-template-columns: 1fr; gap: 44px; } }
+.about-copy p { color: var(--muted); margin-bottom: 16px; }
+.about-stats { display: flex; gap: 38px; margin-top: 34px; flex-wrap: wrap; }
+.stat b { display: block; font-family: var(--font-display); font-size: 38px; font-weight: 500; }
+.stat span { font-size: 13px; color: var(--faint); letter-spacing: 0.08em; text-transform: uppercase; }
+.about-visual { position: relative; }
+.about-visual video, .about-visual img.fallback {
+  border-radius: var(--radius); border: 1px solid var(--line);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.55);
+  width: 100%; aspect-ratio: 16 / 10; object-fit: cover;
+}
+.badge-float {
+  position: absolute; right: -22px; bottom: -30px; width: 118px; height: 118px;
+  filter: drop-shadow(0 14px 30px rgba(0, 0, 0, 0.6));
+  animation: floaty 5s ease-in-out infinite;
+}
+@keyframes floaty { 0%,100% { transform: translateY(0) rotate(-4deg); } 50% { transform: translateY(-9px) rotate(2deg); } }
+@media (max-width: 880px) { .badge-float { right: 4px; bottom: -24px; width: 92px; height: 92px; } }
+
+/* ============ footer ============ */
+footer { border-top: 1px solid var(--line); padding: 54px 0 44px; }
+.foot { display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; }
+.foot-links { display: flex; gap: 26px; flex-wrap: wrap; }
+.foot a { color: var(--muted); text-decoration: none; font-size: 14.5px; transition: color 0.2s; }
+.foot a:hover { color: var(--ember-1); }
+.foot .copy { color: var(--faint); font-size: 13.5px; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+  html { scroll-behavior: auto; }
+  .reveal { opacity: 1; transform: none; }
+}
+</style>
+<style>.hero{min-height:400px !important}.hero-content{padding:80px 0 40px !important}html.js .reveal{opacity:1 !important;transform:none !important;transition:none !important}</style></head>
+<body>
+<script>document.documentElement.classList.add('js');</script>
+
+<!-- ============ nav ============ -->
+<nav class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top">
+      <svg class="flame" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M12 2c1 3.5 4.5 5 4.5 9a4.5 4.5 0 0 1-9 0c0-1.6.6-2.8 1.4-4C9.4 8.6 10 10 11 10.5 10.6 7 11 4.5 12 2Z" fill="url(#fg)"/>
+        <path d="M12 13c.7 1.4 2 2 2 3.7a2 2 0 1 1-4 0c0-1.1.6-1.9 1.2-2.6.1.5.4.9.8.9-.2-.8-.2-1.4 0-2Z" fill="#fff2d9" opacity="0.9"/>
+        <defs><linearGradient id="fg" x1="7" y1="4" x2="17" y2="16"><stop stop-color="#ffb650"/><stop offset="0.55" stop-color="#ff6a3a"/><stop offset="1" stop-color="#ff3d81"/></linearGradient></defs>
+      </svg>
+      Firedreams<span style="color: var(--ember-1);">&nbsp;Studio</span>
+    </a>
+    <div class="nav-links">
+      <a href="#datd">Games</a>
+      <a href="#mobile">Apps</a>
+      <a href="#about">About</a>
+      <a class="nav-cta" href="https://demonatthedoor.com/" target="_blank" rel="noopener">Demon At The Door</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ============ hero ============ -->
+<header class="hero" id="top">
+  <video autoplay muted loop playsinline poster="assets/img/campfire_poster.webp" aria-hidden="true">
+    <source src="assets/video/campfire3.mp4" type="video/mp4" />
+  </video>
+  <div class="veil"></div>
+  <canvas id="embers"></canvas>
+  <div class="wrap">
+    <div class="hero-content">
+      <span class="eyebrow reveal in">Indie games &amp; apps, made by one person</span>
+      <h1 class="reveal in d1">Small studio.<br /><em class="grad-text">Burning bright.</em></h1>
+      <p class="lede reveal in d2">Firedreams Studio crafts story-rich games and beautifully polished mobile apps. Every pixel placed by hand, every idea kept warm until it is ready.</p>
+      <div class="hero-ctas reveal in d3">
+        <a class="btn btn-fire" href="#datd">
+          See what makes us shine
+          <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M8 3v10m0 0 4.5-4.5M8 13 3.5 8.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a class="btn btn-ghost" href="https://demonatthedoor.com/" target="_blank" rel="noopener">Demon At The Door ↗</a>
+      </div>
+    </div>
+  </div>
+  <a class="scroll-hint" href="#datd" aria-label="Scroll to our games"><span>Scroll</span><span class="line"></span></a>
+</header>
+
+<!-- ============ demon at the door ============ -->
+<section id="datd" class="section-pad">
+  <div class="wrap">
+    <div class="datd-grid">
+      <div class="datd-copy">
+        <span class="eyebrow reveal">Flagship project</span>
+        <h2 class="reveal d1">Demon At The <span class="grad-text">Door</span></h2>
+        <div class="datd-chips reveal d1">
+          <span class="chip"><span class="dot live"></span>In development</span>
+          <span class="chip adult">18+</span>
+          <span class="chip">Narrative adventure</span>
+          <span class="chip">Hand-drawn 2D</span>
+        </div>
+        <p class="reveal d2">A mansion in the woods. A town full of secrets. And something waiting at the door. Demon At The Door is an adult adventure game with gorgeous hand-drawn 2D art and a story that stays with you.</p>
+        <p class="reveal d2">Early access opens on <strong style="color: var(--ink);">Patreon</strong> first, with wider store releases following as the game matures.</p>
+        <div class="progress-block reveal d2">
+          <div class="progress-label"><span>Development progress</span><b>15%</b></div>
+          <div class="progress-track"><div class="progress-fill" data-progress="15"></div></div>
+          <p class="progress-note">Early access begins around the 20% mark. It is getting close.</p>
+        </div>
+        <div class="reveal d3">
+          <a class="btn btn-fire" href="https://demonatthedoor.com/" target="_blank" rel="noopener">Visit demonatthedoor.com ↗</a>
+        </div>
+      </div>
+      <div class="door-stage reveal d2">
+        <div>
+          <div class="door-scene" aria-hidden="true">
+            <div class="door-glow"></div>
+            <div class="door">
+              <div class="crack"></div>
+              <div class="eyes"><i></i><i></i></div>
+              <div class="knob"></div>
+            </div>
+            <div class="door-light"></div>
+          </div>
+          <p class="door-caption">Don't worry. It only bites the story open.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ mobile ============ -->
+<section id="mobile" class="section-pad">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow reveal">Mobile craft</span>
+      <h2 class="reveal d1">Small screens, <span class="grad-text">serious polish</span></h2>
+      <p class="reveal d2">Tools and games for your pocket. No ads, no tracking, no filler. Just carefully built software.</p>
+    </div>
+    <div class="cards">
+      <div class="card reveal">
+        <div class="card-top">
+          <img class="app-icon" src="assets/img/bubble_icon.webp" alt="Bubble Level app icon" width="58" height="58" loading="lazy" />
+          <div>
+            <h3>Bubble Level</h3>
+            <div class="platform">Android</div>
+          </div>
+          <span class="chip"><span class="dot live"></span>In review on Google Play</span>
+        </div>
+        <p>A spirit level that feels like the real thing. Surface, edge and angle modes, a liquid bubble that splits and merges as you move, haptic and sound feedback when you hit level, and calibration you can trust.</p>
+        <div class="card-visual">
+          <div class="phones" aria-hidden="true">
+            <div class="phone back"><img src="assets/img/bubble_surface_dark.webp" alt="" loading="lazy" width="480" height="1029" /></div>
+            <div class="phone front"><img src="assets/img/bubble_edge_light.webp" alt="Bubble Level app, edge mode with liquid bubble vials" loading="lazy" width="480" height="1030" /></div>
+          </div>
+        </div>
+      </div>
+      <div class="card reveal d1">
+        <div class="card-top">
+          <div>
+            <h3>Flags of the World</h3>
+            <div class="platform">Android</div>
+          </div>
+          <span class="chip"><span class="dot next"></span>Next release</span>
+        </div>
+        <p>A bright, family-friendly flag quiz. 224 flags, three difficulties, sneaky lookalike rounds, arcade-style high scores and a falling-stars celebration when you get a perfect run. Fully offline.</p>
+        <div class="card-visual">
+          <div class="flag-board" aria-hidden="true">
+            <div class="hiscore">HI-SCORE&nbsp;&nbsp;3000</div>
+            <div class="flag-grid">
+              <div class="flag-tile"><img src="assets/img/flags/jp.png" alt="" loading="lazy" /></div>
+              <div class="flag-tile"><img src="assets/img/flags/br.png" alt="" loading="lazy" /></div>
+              <div class="flag-tile"><img src="assets/img/flags/ca.png" alt="" loading="lazy" /></div>
+              <div class="flag-tile"><img src="assets/img/flags/kr.png" alt="" loading="lazy" /></div>
+              <div class="flag-tile"><img src="assets/img/flags/gr.png" alt="" loading="lazy" /></div>
+              <div class="flag-tile"><img src="assets/img/flags/za.png" alt="" loading="lazy" /></div>
+              <div class="flag-tile"><img src="assets/img/flags/se.png" alt="" loading="lazy" /></div>
+              <div class="flag-tile"><img src="assets/img/flags/ua.png" alt="" loading="lazy" /></div>
+              <div class="flag-tile"><img src="assets/img/flags/ch.png" alt="" loading="lazy" /></div>
+              <div class="flag-tile"><img src="assets/img/flags/in.png" alt="" loading="lazy" /></div>
+              <div class="flag-tile"><img src="assets/img/flags/fr.png" alt="" loading="lazy" /></div>
+              <div class="flag-tile"><img src="assets/img/flags/pt.png" alt="" loading="lazy" /></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- concept lab -->
+    <div class="lab reveal" style="margin-top: 26px;">
+      <div class="stamp">Concept lab</div>
+      <div>
+        <span class="chip"><span class="dot concept"></span>Very early concept</span>
+        <h3>Capybara Blaster</h3>
+        <p>Chaotic 2D artillery action starring the world's most relaxed rodents. Think classic turn-based mayhem, but fluffier. The first concept paintings exist; everything else still lives on sticky notes. All platforms, someday.</p>
+      </div>
+      <figure class="lab-art">
+        <img src="assets/img/capybara_concept.webp" alt="Capybara Blaster concept art: a capybara in tactical gear aiming a grenade launcher while tanks and rockets cause mayhem in the jungle behind it" width="760" height="760" loading="lazy" />
+        <figcaption>Concept painting #1: negotiations have failed.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ about ============ -->
+<section id="about" class="section-pad">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="about-copy">
+        <span class="eyebrow reveal">About the studio</span>
+        <h2 class="reveal d1" style="font-size: clamp(32px, 4.6vw, 52px); margin: 18px 0 22px;">One person.<br /><span class="grad-text">One campfire.</span></h2>
+        <p class="reveal d2">Firedreams Studio is a one-person indie studio. Design, code, art and story all come from the same pair of hands, which keeps every project personal, deliberate and a little bit stubborn.</p>
+        <p class="reveal d2">The portfolio is small today. That is the point. Each release gets full attention until it is genuinely good, then the fire moves to the next dream.</p>
+        <div class="about-stats reveal d3">
+          <div class="stat"><b class="grad-text">1</b><span>Developer</span></div>
+          <div class="stat"><b class="grad-text">4</b><span>Projects burning</span></div>
+          <div class="stat"><b class="grad-text">&infin;</b><span>Late nights</span></div>
+        </div>
+      </div>
+      <div class="about-visual reveal d2">
+        <video muted loop playsinline preload="none" poster="assets/img/campfire_poster.webp" aria-hidden="true" id="aboutVideo">
+          <source src="assets/video/campfire1.mp4" type="video/mp4" />
+        </video>
+        <img class="badge-float" src="assets/img/firedreams_logo_280.webp" alt="Firedreams Studio campfire badge" width="118" height="118" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ footer ============ -->
+<footer>
+  <div class="wrap foot">
+    <div class="foot-links">
+      <a href="https://demonatthedoor.com/" target="_blank" rel="noopener">demonatthedoor.com</a>
+      <a href="mailto:dream@firedreams.studio">Contact</a>
+      <a href="documents/bubble_level_privacy_policy.txt">Privacy policy</a>
+    </div>
+    <div class="copy">&copy; 2026 Firedreams Studio &bull; firedreams.studio</div>
+  </div>
+</footer>
+
+<script>
+// nav background on scroll
+const nav = document.getElementById('nav');
+addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 30), { passive: true });
+
+// reveal on scroll
+const io = new IntersectionObserver(entries => {
+  for (const e of entries) if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+}, { threshold: 0.15 });
+document.querySelectorAll('.reveal:not(.in)').forEach(el => io.observe(el));
+
+// progress bar fills when visible
+const pf = document.querySelector('.progress-fill');
+new IntersectionObserver((entries, obs) => {
+  if (entries[0].isIntersecting) { pf.style.width = pf.dataset.progress + '%'; obs.disconnect(); }
+}, { threshold: 0.5 }).observe(pf);
+
+// about video: play only when visible
+const av = document.getElementById('aboutVideo');
+new IntersectionObserver(entries => {
+  entries[0].isIntersecting ? av.play().catch(() => {}) : av.pause();
+}, { threshold: 0.25 }).observe(av);
+
+// ember particles over the hero
+const canvas = document.getElementById('embers');
+const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+if (!reduceMotion) {
+  const ctx = canvas.getContext('2d');
+  let w, h, embers = [];
+  const hero = canvas.parentElement;
+  const resize = () => { w = canvas.width = hero.clientWidth; h = canvas.height = hero.clientHeight; };
+  addEventListener('resize', resize); resize();
+  const spawn = () => ({
+    x: w * (0.3 + Math.random() * 0.4),
+    y: h * (0.75 + Math.random() * 0.25),
+    r: 0.8 + Math.random() * 2.2,
+    vy: 0.35 + Math.random() * 0.85,
+    vx: (Math.random() - 0.5) * 0.4,
+    sway: Math.random() * Math.PI * 2,
+    life: 0,
+    max: 260 + Math.random() * 200,
+    hue: 18 + Math.random() * 26
+  });
+  for (let i = 0; i < 26; i++) { const e = spawn(); e.life = Math.random() * e.max; embers.push(e); }
+  (function tick() {
+    ctx.clearRect(0, 0, w, h);
+    for (const e of embers) {
+      e.life++;
+      e.y -= e.vy; e.sway += 0.02;
+      e.x += e.vx + Math.sin(e.sway) * 0.3;
+      const t = e.life / e.max;
+      const alpha = t < 0.15 ? t / 0.15 : 1 - (t - 0.15) / 0.85;
+      ctx.beginPath();
+      ctx.arc(e.x, e.y, e.r, 0, Math.PI * 2);
+      ctx.fillStyle = `hsla(${e.hue}, 100%, 62%, ${Math.max(alpha, 0) * 0.8})`;
+      ctx.shadowColor = 'rgba(255,120,50,0.8)';
+      ctx.shadowBlur = 8;
+      ctx.fill();
+      if (e.life >= e.max || e.y < -10) Object.assign(e, spawn(), { y: h * (0.85 + Math.random() * 0.15), life: 0 });
+    }
+    requestAnimationFrame(tick);
+  })();
+}
+</script>
+</body>
+</html>

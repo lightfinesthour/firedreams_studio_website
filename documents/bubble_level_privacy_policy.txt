@@ -1,0 +1,50 @@
+PRIVACY POLICY FOR BUBBLE LEVEL
+================================
+
+App:         Bubble Level (studio.firedreams.level)
+Developer:   Firedreams Studio
+Contact:     dream@firedreams.studio
+Effective:   13 July 2026
+Last update: 13 July 2026
+
+
+SUMMARY
+-------
+Bubble Level collects no data. None. The app has no internet access,
+no ads, no analytics, no tracking, and no third-party services.
+
+
+DETAILS
+-------
+
+1. Data collection
+   Bubble Level does not collect, store, or transmit any personal data
+   or any other data. The app does not request the internet permission,
+   so it is technically unable to send anything off your device.
+
+2. Sensors
+   The app reads your device's motion sensors (gravity sensor or
+   accelerometer) to measure tilt. These readings are processed in
+   real time on your device only and are never stored or shared.
+
+3. Settings
+   Your preferences (such as calibration, sound and vibration settings)
+   are stored locally on your device only. They are deleted when you
+   uninstall the app.
+
+4. Third parties
+   The app contains no advertising, no analytics, and no third-party
+   code that collects data. Your purchase of the app is handled entirely
+   by Google Play; see Google's privacy policy for how Google processes
+   payments.
+
+5. Children
+   The app is safe for all ages. Since no data is collected from anyone,
+   no data is collected from children.
+
+6. Changes
+   If this policy ever changes, the new version will be published at
+   this same address with an updated date.
+
+7. Contact
+   Questions? Email dream@firedreams.studio.

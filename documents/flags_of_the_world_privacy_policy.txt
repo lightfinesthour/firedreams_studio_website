@@ -1,0 +1,51 @@
+PRIVACY POLICY FOR FLAGS OF THE WORLD
+=====================================
+
+App:         Flags of the World (com.firedreams.flagsoftheworld)
+Developer:   Firedreams Studio
+Contact:     dream@firedreams.studio
+Effective:   23 July 2026
+Last update: 23 July 2026
+
+
+SUMMARY
+-------
+Flags of the World collects no data. None. The app has no internet
+access, no ads, no analytics, no tracking, and no third-party services.
+
+
+DETAILS
+-------
+
+1. Data collection
+   Flags of the World does not collect, store, or transmit any personal
+   data or any other data. The app does not request the internet
+   permission, so it is technically unable to send anything off your
+   device.
+
+2. Game content
+   All 224 flag images are bundled inside the app itself. Nothing is
+   downloaded, and no request ever leaves your device while you play.
+
+3. Scores and settings
+   Your high scores, the name you optionally type next to a high score,
+   and your preferences (such as sound and music toggles) are stored
+   locally on your device only. They are never sent anywhere, and they
+   are deleted when you uninstall the app.
+
+4. Third parties
+   The app contains no advertising, no analytics, and no third-party
+   code that collects data. Distribution of the app is handled entirely
+   by Google Play; see Google's privacy policy for how Google processes
+   downloads.
+
+5. Children
+   The app is safe for all ages. Since no data is collected from anyone,
+   no data is collected from children.
+
+6. Changes
+   If this policy ever changes, the new version will be published at
+   this same address with an updated date.
+
+7. Contact
+   Questions? Email dream@firedreams.studio.

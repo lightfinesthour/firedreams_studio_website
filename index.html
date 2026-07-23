@@ -430,6 +430,41 @@ section[id] { scroll-margin-top: 84px; }
 .probe img { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
 .probe figcaption { padding: 8px 12px 10px; font-size: 11.5px; color: var(--faint); font-style: italic; }
 
+/* ============ probe zoom + screenshot lightbox ============ */
+.probe-zoom { display: block; width: 100%; padding: 0; border: 0; background: none; font: inherit; cursor: zoom-in; position: relative; }
+.probe-zoom img { transition: transform 0.45s ease; }
+.probe:hover .probe-zoom img { transform: scale(1.045); }
+.probe-zoom:focus-visible { outline: 2px solid rgba(86, 220, 178, 0.7); outline-offset: -2px; }
+.probe-hint { position: absolute; right: 8px; bottom: 8px; display: inline-flex; align-items: center; gap: 5px; padding: 5px 9px; border-radius: 999px; background: rgba(5, 9, 17, 0.85); border: 1px solid rgba(86, 220, 178, 0.4); color: rgb(86, 220, 178); font-size: 10px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; opacity: 0; transform: translateY(4px); transition: opacity 0.25s ease, transform 0.25s ease; pointer-events: none; }
+.probe:hover .probe-hint, .probe-zoom:focus-visible .probe-hint { opacity: 1; transform: none; }
+
+.lightbox { position: fixed; inset: 0; z-index: 200; display: flex; align-items: center; justify-content: center; }
+.lightbox[hidden] { display: none; }
+.lb-backdrop { position: absolute; inset: 0; background: rgba(4, 7, 14, 0.93); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
+.lb-stage { position: relative; margin: 0; display: flex; flex-direction: column; align-items: center; gap: 14px; max-width: min(1180px, 92vw); animation: lbIn 0.32s cubic-bezier(0.2, 0.8, 0.3, 1); }
+.lb-stage img { max-width: 100%; max-height: 76vh; border-radius: 10px; border: 1px solid rgba(86, 220, 178, 0.35); background: #070b14; box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6); }
+.lb-caption { display: flex; align-items: baseline; gap: 12px; font-size: 13px; font-style: italic; color: var(--muted); }
+.lb-count { font-style: normal; font-size: 10.5px; font-weight: 700; letter-spacing: 0.24em; color: rgba(86, 220, 178, 0.9); }
+.lb-btn { position: absolute; z-index: 2; display: grid; place-items: center; width: 42px; height: 42px; border-radius: 50%; border: 1px solid rgba(148, 163, 210, 0.28); background: rgba(10, 15, 30, 0.72); color: var(--muted); cursor: pointer; transition: color 0.2s, border-color 0.2s, background 0.2s, transform 0.2s; }
+.lb-btn:hover, .lb-btn:focus-visible { color: #fff; border-color: rgba(86, 220, 178, 0.6); background: rgba(86, 220, 178, 0.14); }
+.lb-close { top: 20px; right: 20px; }
+.lb-nav { top: 50%; transform: translateY(-50%); }
+.lb-nav:hover, .lb-nav:focus-visible { transform: translateY(-50%) scale(1.08); }
+.lb-prev { left: 18px; }
+.lb-next { right: 18px; }
+body.no-scroll { overflow: hidden; }
+@keyframes lbIn { from { opacity: 0; transform: scale(0.94) translateY(10px); } to { opacity: 1; transform: none; } }
+@media (max-width: 640px) {
+  .lb-nav { width: 36px; height: 36px; }
+  .lb-prev { left: 8px; }
+  .lb-next { right: 8px; }
+  .lb-caption { padding: 0 44px; text-align: center; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .lb-stage { animation: none; }
+  .probe:hover .probe-zoom img { transform: none; }
+}
+
 /* ============ lily hop ============ */
 #more {
   background:
@@ -654,9 +689,9 @@ section[id] { scroll-margin-top: 84px; }
       <div class="lab-probes reveal d3">
         <span class="lab-probes-label">In-engine probes</span>
         <div class="lab-probes-grid">
-          <figure class="probe"><img src="assets/img/capybara/capy_aim.png" alt="Capybara Blaster: capybaras shake their fist at eachother" loading="lazy" width="900" height="506" /><figcaption>Calm before the storm</figcaption></figure>
-          <figure class="probe"><img src="assets/img/capybara/capy_weapons.png" alt="Capybara Blaster: The weapon selection screen" loading="lazy" width="900" height="506" /><figcaption>Direct hit</figcaption></figure>
-          <figure class="probe"><img src="assets/img/capybara/capy_with_house.png" alt="Capybara Blaster: new assets" loading="lazy" width="900" height="506" /><figcaption>Lining up the next shot</figcaption></figure>
+          <figure class="probe"><button class="probe-zoom" type="button" aria-haspopup="dialog" aria-label="Enlarge screenshot: Calm before the storm"><img src="assets/img/capybara/capy_aim.png" alt="Capybara Blaster: capybaras shake their fist at eachother" loading="lazy" width="900" height="506" /><span class="probe-hint" aria-hidden="true"><svg width="11" height="11" viewBox="0 0 16 16" fill="none"><path d="M6 2H2v4M10 14h4v-4M2 2l5 5M14 14l-5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Enlarge</span></button><figcaption>Calm before the storm</figcaption></figure>
+          <figure class="probe"><button class="probe-zoom" type="button" aria-haspopup="dialog" aria-label="Enlarge screenshot: Weapon selection"><img src="assets/img/capybara/capy_weapons.png" alt="Capybara Blaster: The weapon selection screen" loading="lazy" width="900" height="506" /><span class="probe-hint" aria-hidden="true"><svg width="11" height="11" viewBox="0 0 16 16" fill="none"><path d="M6 2H2v4M10 14h4v-4M2 2l5 5M14 14l-5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Enlarge</span></button><figcaption>Direct hit</figcaption></figure>
+          <figure class="probe"><button class="probe-zoom" type="button" aria-haspopup="dialog" aria-label="Enlarge screenshot: Level with new assets"><img src="assets/img/capybara/capy_with_house.png" alt="Capybara Blaster: new assets" loading="lazy" width="900" height="506" /><span class="probe-hint" aria-hidden="true"><svg width="11" height="11" viewBox="0 0 16 16" fill="none"><path d="M6 2H2v4M10 14h4v-4M2 2l5 5M14 14l-5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Enlarge</span></button><figcaption>Lining up the next shot</figcaption></figure>
         </div>
       </div>
     </div>
@@ -793,6 +828,24 @@ section[id] { scroll-margin-top: 84px; }
   </div>
 </footer>
 
+<!-- screenshot lightbox (shared by the capybara probes) -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Capybara Blaster screenshots" hidden>
+  <div class="lb-backdrop" data-lb-close></div>
+  <button class="lb-btn lb-close" type="button" data-lb-close aria-label="Close viewer">
+    <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M3 3l10 10M13 3 3 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+  </button>
+  <button class="lb-btn lb-nav lb-prev" type="button" aria-label="Previous screenshot">
+    <svg width="17" height="17" viewBox="0 0 16 16" fill="none"><path d="M10 2 4 8l6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+  <figure class="lb-stage">
+    <img id="lbImg" src="" alt="">
+    <figcaption class="lb-caption"><span class="lb-count" id="lbCount"></span><span id="lbCap"></span></figcaption>
+  </figure>
+  <button class="lb-btn lb-nav lb-next" type="button" aria-label="Next screenshot">
+    <svg width="17" height="17" viewBox="0 0 16 16" fill="none"><path d="m6 2 6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+</div>
+
 <script>
 // nav background on scroll
 const nav = document.getElementById('nav');
@@ -856,6 +909,58 @@ if (!reduceMotion) {
     requestAnimationFrame(tick);
   })();
 }
+
+// screenshot lightbox for the capybara probes
+const lightbox = document.getElementById('lightbox');
+const lbImg = document.getElementById('lbImg');
+const lbCap = document.getElementById('lbCap');
+const lbCount = document.getElementById('lbCount');
+const shots = [...document.querySelectorAll('.probe-zoom')];
+let shotCur = 0, shotFocus = null;
+
+const showShot = i => {
+  shotCur = (i + shots.length) % shots.length;
+  const thumb = shots[shotCur].querySelector('img');
+  lbImg.src = thumb.src; // same file as the thumbnail, so it swaps instantly from cache
+  lbImg.alt = thumb.alt;
+  lbCap.textContent = shots[shotCur].closest('.probe').querySelector('figcaption').textContent;
+  lbCount.textContent = (shotCur + 1) + ' / ' + shots.length;
+  if (!reduceMotion) lbImg.animate(
+    [{ opacity: 0, transform: 'scale(0.965)' }, { opacity: 1, transform: 'none' }],
+    { duration: 240, easing: 'cubic-bezier(0.2, 0.8, 0.3, 1)' }
+  );
+};
+const openLightbox = i => {
+  shotFocus = document.activeElement;
+  showShot(i);
+  lightbox.hidden = false;
+  document.body.classList.add('no-scroll');
+  document.querySelector('.lb-close').focus();
+};
+const closeLightbox = () => {
+  lightbox.hidden = true;
+  document.body.classList.remove('no-scroll');
+  if (shotFocus) shotFocus.focus();
+};
+
+shots.forEach((btn, i) => btn.addEventListener('click', () => openLightbox(i)));
+document.querySelector('.lb-prev').addEventListener('click', () => showShot(shotCur - 1));
+document.querySelector('.lb-next').addEventListener('click', () => showShot(shotCur + 1));
+lightbox.addEventListener('click', e => { if (e.target.closest('[data-lb-close]')) closeLightbox(); });
+addEventListener('keydown', e => {
+  if (lightbox.hidden) return;
+  if (e.key === 'Escape') closeLightbox();
+  else if (e.key === 'ArrowLeft') showShot(shotCur - 1);
+  else if (e.key === 'ArrowRight') showShot(shotCur + 1);
+});
+let swipeX = null;
+lightbox.addEventListener('touchstart', e => { swipeX = e.touches[0].clientX; }, { passive: true });
+lightbox.addEventListener('touchend', e => {
+  if (swipeX === null) return;
+  const dx = e.changedTouches[0].clientX - swipeX;
+  if (Math.abs(dx) > 40) showShot(shotCur + (dx < 0 ? 1 : -1));
+  swipeX = null;
+}, { passive: true });
 </script>
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "a78d703c29684708ae4434e91a9b8b7e"}'></script><!-- End Cloudflare Web Analytics -->
 </body>

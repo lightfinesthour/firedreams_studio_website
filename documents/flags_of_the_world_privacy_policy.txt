@@ -1,11 +1,11 @@
 PRIVACY POLICY FOR FLAGS OF THE WORLD
 =====================================
 
-App:         Flags of the World (com.firedreams.flagsoftheworld)
+App:         Flags of the World (studio.firedreams.flagsoftheworld)
 Developer:   Firedreams Studio
 Contact:     dream@firedreams.studio
 Effective:   23 July 2026
-Last update: 23 July 2026
+Last update: 27 July 2026
 
 
 SUMMARY

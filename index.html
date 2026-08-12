@@ -30,8 +30,9 @@
   "logo": "https://firedreams.studio/assets/img/apple-touch-icon.png",
   "description": "A one-person indie studio crafting story-rich games and polished mobile apps.",
   "sameAs": [
+    "https://firedreams.itch.io/",
+    "https://play.google.com/store/apps/developer?id=firedreams.studio",
     "https://demonatthedoor.com/",
-    "https://devpost.com/software/lily-hop",
     "https://addons.mozilla.org/en-US/firefox/addon/reasoning-closed-for-llama-cpp/"
   ]
 }
@@ -478,6 +479,7 @@ body.no-scroll { overflow: hidden; }
 .lily-copy h2 { font-size: clamp(38px, 5vw, 60px); margin: 18px 0 20px; }
 .lily-copy p { color: var(--muted); margin-bottom: 16px; max-width: 520px; }
 .lily-chips { display: flex; gap: 10px; flex-wrap: wrap; margin: 22px 0 30px; }
+.lily-actions { display: flex; gap: 12px; flex-wrap: wrap; }
 .lily-stage { position: relative; perspective: 1000px; }
 .lily-frame { position: relative; overflow: hidden; border-radius: var(--radius); border: 1px solid var(--line); box-shadow: 0 30px 70px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(86, 220, 178, 0.12), 0 0 50px rgba(86, 220, 178, 0.08); aspect-ratio: 16 / 9; background: #05080d; transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.5s ease; }
 .lily-stage:hover .lily-frame { transform: translateY(-4px); box-shadow: 0 40px 80px rgba(0, 0, 0, 0.7); }
@@ -656,12 +658,14 @@ body.no-scroll { overflow: hidden; }
       </div>
       <div class="card reveal d1">
         <div class="card-top">
-          <img class="app-icon" src="assets/img/flags_app/flags_icon.webp" alt="Flags of the World app icon, a globe inside a golden trophy cup with two pennants" width="58" height="58" loading="lazy" />
+          <a class="app-icon-link" href="https://play.google.com/store/apps/details?id=studio.firedreams.flagsoftheworld" target="_blank" rel="noopener" aria-label="Get Flags of the World on Google Play">
+            <img class="app-icon" src="assets/img/flags_app/flags_icon.webp" alt="Flags of the World app icon, a globe inside a golden trophy cup with two pennants" width="58" height="58" loading="lazy" />
+          </a>
           <div>
-            <h3>Flags of the World</h3>
+            <h3><a class="card-title-link" href="https://play.google.com/store/apps/details?id=studio.firedreams.flagsoftheworld" target="_blank" rel="noopener">Flags of the World<span class="go" aria-hidden="true">&#8599;</span></a></h3>
             <div class="platform">Android</div>
           </div>
-          <span class="chip"><span class="dot next"></span>Releasing soon</span>
+          <span class="chip"><span class="dot ship"></span>Available on Google Play</span>
         </div>
         <p>A bright, family-friendly flag quiz. 224 flags, three difficulties, sneaky lookalike rounds, arcade-style high scores and a falling-stars celebration when you get a perfect run. Fully offline.</p>
         <div class="card-visual">
@@ -707,14 +711,19 @@ body.no-scroll { overflow: hidden; }
         <h2 class="reveal d1">Lily <span class="grad-text">Hop</span></h2>
         <div class="lily-chips reveal d1">
           <span class="chip award">&#9733; OpenAI Build Week</span>
+          <span class="chip"><span class="dot ship"></span>Demo on itch.io</span>
           <span class="chip">Devpost submission</span>
           <span class="chip">Godot 4.7</span>
           <span class="chip">Custom water shader</span>
         </div>
         <p class="reveal d2">A game with realistic graphics and sound design with a natural feel, make the player feel real danger for the creatures they control, and feel relaxed while they are eaten by a fish.</p>
-        <p class="reveal d2">Built for OpenAI's Build Week Competition and submitted on Devpost.</p>
-        <div class="reveal d3">
-          <a class="btn btn-fire" href="https://devpost.com/software/lily-hop" target="_blank" rel="noopener">
+        <p class="reveal d2">Built for OpenAI's Build Week Competition and submitted on Devpost. A playable demo is up on itch.io.</p>
+        <div class="reveal d3 lily-actions">
+          <a class="btn btn-fire" href="https://firedreams.itch.io/lily-hop-demo" target="_blank" rel="noopener">
+            Play the demo on itch.io
+            <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M5 3h8v8M13 3 3 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a class="btn btn-ghost" href="https://devpost.com/software/lily-hop" target="_blank" rel="noopener">
             See it on Devpost
             <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M5 3h8v8M13 3 3 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>

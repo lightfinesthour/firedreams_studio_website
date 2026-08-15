@@ -613,9 +613,7 @@ body.no-scroll { overflow: hidden; }
 
 <!-- ============ hero ============ -->
 <header class="hero" id="top">
-  <video muted loop playsinline preload="none" poster="assets/img/campfire_poster.webp" aria-hidden="true" id="heroVideo">
-    <source data-src="assets/video/campfire3.mp4" type="video/mp4" />
-  </video>
+  <video muted loop playsinline preload="none" poster="assets/img/campfire_poster.webp" aria-hidden="true" id="heroVideo" data-src="assets/video/campfire3.mp4"></video>
   <div class="veil"></div>
   <canvas id="embers"></canvas>
   <div class="wrap">
@@ -863,9 +861,7 @@ body.no-scroll { overflow: hidden; }
         </div>
       </div>
       <div class="about-visual reveal d2">
-        <video muted loop playsinline preload="none" poster="assets/img/campfire_poster.webp" aria-hidden="true" id="aboutVideo">
-          <source data-src="assets/video/campfire1.mp4" type="video/mp4" />
-        </video>
+        <video muted loop playsinline preload="none" poster="assets/img/campfire_poster.webp" aria-hidden="true" id="aboutVideo" data-src="assets/video/campfire1.mp4"></video>
         <img class="badge-float" src="assets/img/firedreams_logo_280.webp" alt="Firedreams Studio campfire badge" width="118" height="118" loading="lazy" />
       </div>
     </div>
@@ -925,8 +921,13 @@ new IntersectionObserver((entries, obs) => {
 const conn = navigator.connection || {};
 const lowData = conn.saveData || /(^|-)2g$/.test(conn.effectiveType || '');
 const enableVideo = v => {
-  const src = v.querySelector('source');
-  if (src && src.dataset.src) { src.src = src.dataset.src; delete src.dataset.src; v.load(); }
+  if (!v.dataset.src) return;
+  const src = document.createElement('source');
+  src.type = 'video/mp4';
+  src.src = v.dataset.src;
+  delete v.dataset.src;
+  v.append(src);
+  v.load();
 };
 const heroVideo = document.getElementById('heroVideo');
 if (!lowData) { enableVideo(heroVideo); heroVideo.play().catch(() => {}); }
@@ -1031,6 +1032,6 @@ lightbox.addEventListener('touchend', e => {
   swipeX = null;
 }, { passive: true });
 </script>
-<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "de424a85e3134b8ba483898fb1dfaf1b"}'></script><!-- End Cloudflare Web Analytics -->
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "de424a85e3134b8ba483898fb1dfaf1b"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>

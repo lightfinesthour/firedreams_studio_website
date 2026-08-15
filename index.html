@@ -106,7 +106,7 @@
   --font-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 * { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; overflow-x: clip; }
 body {
   background: var(--bg);
   color: var(--ink);
@@ -400,7 +400,7 @@ html:not(.js) .progress-fill { width: 16%; }
   display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: center;
   position: relative; overflow: hidden;
 }
-@media (max-width: 760px) { .lab { grid-template-columns: 1fr; } .lab-art { width: 100%; max-width: 380px; margin: 12px auto 0; } }
+@media (max-width: 760px) { .lab { grid-template-columns: 1fr; } .lab-art { width: 100%; max-width: 380px; margin: 12px auto 0; } .lab .stamp { right: 4px; padding: 5px 22px; } }
 .lab h3 { font-size: 30px; margin: 14px 0 12px; }
 .lab p { color: var(--muted); font-size: 15.5px; max-width: 480px; }
 .lab .stamp {

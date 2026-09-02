@@ -1,0 +1,90 @@
+PRIVACY POLICY
+Firedreams Studio
+Last updated: September 2026
+
+1. WHO WE ARE
+
+Firedreams Studio is a sole proprietorship (eenmanszaak) registered in the
+Netherlands, based in Assen. We develop and sell the visual novel game
+"Demon at the Door" and related digital content.
+
+Contact:
+Firedreams Studio
+Assen, The Netherlands
+Email: dream@firedreams.studio
+KvK: 42105483
+
+2. WHAT DATA WE COLLECT
+
+We collect only the data needed to run our business:
+
+- Contact details (name, email address) when you email us or contact us
+  through a platform.
+- Order and payment information when you buy our game or support us
+  through a platform such as Steam, itch.io, or Patreon. Payments are
+  processed by those platforms. We receive the details needed to deliver
+  your purchase and meet our tax obligations.
+- Newsletter data (email address) if you subscribe to updates, and only
+  with your consent.
+- Website usage data if our website uses analytics. If it does, this
+  policy will name the analytics tool and what it collects.
+
+3. WHAT WE USE YOUR DATA FOR
+
+- Delivering purchases and rewards you are entitled to.
+- Answering your messages.
+- Sending newsletters or updates you signed up for. Every message
+  includes an unsubscribe link.
+- Meeting legal obligations, such as Dutch tax administration
+  (Belastingdienst), which requires us to keep sales records for 7 years.
+
+We do not sell your data. We do not share it with advertisers.
+
+4. THIRD-PARTY PLATFORMS
+
+If you buy from us or support us through a third-party platform (Steam,
+itch.io, Patreon, or similar), that platform processes your data under
+its own privacy policy. We only receive the information the platform
+shares with sellers and creators.
+
+5. LEGAL BASIS (GDPR)
+
+We process personal data on these grounds:
+
+- Performance of a contract: delivering what you bought.
+- Legal obligation: tax and accounting records.
+- Consent: newsletters and optional updates. You can withdraw consent
+  at any time.
+
+6. RETENTION
+
+- Tax and sales records: 7 years, as required by Dutch law.
+- Email correspondence: up to 2 years after our last contact.
+- Newsletter subscriptions: until you unsubscribe.
+
+7. YOUR RIGHTS
+
+Under the GDPR you have the right to:
+
+- Access the personal data we hold about you.
+- Correct inaccurate data.
+- Request deletion of your data, where the law allows it.
+- Object to or restrict processing.
+- Data portability.
+- Lodge a complaint with the Dutch Data Protection Authority
+  (Autoriteit Persoonsgegevens, autoriteitpersoonsgegevens.nl).
+
+To exercise any of these rights, email us at [YOUR EMAIL]. We respond
+within 30 days.
+
+8. SECURITY
+
+We store data on secured systems with access limited to the owner of
+Firedreams Studio. Accounts holding personal data use strong passwords
+and, where available, two-factor authentication.
+
+9. CHANGES
+
+If we change this policy, we update the date at the top. For significant
+changes we will announce the update on our website or through the
+platform where you follow us.

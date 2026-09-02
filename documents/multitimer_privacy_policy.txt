@@ -1,0 +1,71 @@
+PRIVACY POLICY FOR MULTITIMER
+==============================
+
+App:         MultiTimer (studio.firedreams.multitimerpro)
+Developer:   Firedreams Studio
+Contact:     dream@firedreams.studio
+Effective:   26 August 2026
+Last update: 26 August 2026
+
+
+SUMMARY
+-------
+MultiTimer collects no data. None. The app has no internet access,
+no ads, no analytics, no tracking, and no third-party services.
+
+
+DETAILS
+-------
+
+1. Data collection
+   MultiTimer does not collect, store, or transmit any personal data
+   or any other data. The app does not request the internet
+   permission, so it is technically unable to send anything off your
+   device.
+
+2. Your timers and settings
+   The timers you create — their names, durations, phases, sounds and
+   alert options — along with your app preferences, are stored locally
+   on your device only. They are never sent anywhere, and they are
+   deleted when you uninstall the app.
+
+3. Permissions
+   The permissions MultiTimer asks for exist only to make timers go
+   off at the right moment, and none of them are used to gather
+   information:
+
+     Notifications        to show running timers and to tell you when
+                          one has finished.
+     Alarms and reminders to fire a timer at the exact second it is
+                          due, including while the phone is dozing.
+     Full-screen alerts   to show a finished timer on a locked screen.
+     Run at startup       to put running timers back on the clock
+                          after you restart your phone.
+     Vibration            to buzz when a timer finishes or is about to.
+
+   MultiTimer uses a foreground service so that timers keep running
+   accurately while the app is in the background. That service only
+   counts time and updates its own notification.
+
+4. Third parties
+   The app contains no advertising, no analytics, and no third-party
+   code that collects data. Your purchase of the app is handled
+   entirely by Google Play; see Google's privacy policy for how Google
+   processes payments.
+
+5. Children
+   The app is safe for all ages. Since no data is collected from
+   anyone, no data is collected from children.
+
+6. Your rights
+   Because no data ever reaches us, there is nothing for us to look
+   up, correct, export or erase on your behalf. Your data is on your
+   device and under your control: clearing the app's storage or
+   uninstalling it removes it completely.
+
+7. Changes
+   If this policy ever changes, the new version will be published at
+   this same address with an updated date.
+
+8. Contact
+   Questions? Email dream@firedreams.studio.

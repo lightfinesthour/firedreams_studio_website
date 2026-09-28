@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Firedreams Studio, handcrafted games and apps</title>
-<meta name="description" content="Firedreams Studio is a one-person indie studio crafting story-rich games and beautifully polished mobile apps. Home of Demon At The Door, Bubble Level, Flags of the World, the Lily Hop game jam entry and the Keep Reasoning Closed Firefox add-on." />
+<meta name="description" content="Firedreams Studio is a one-person indie studio crafting story-rich games and beautifully polished mobile apps. Home of Demon At The Door, Bubble Level, Flags of the World, MultiTimer Pro, the Lily Hop game jam entry and the Keep Reasoning Closed Firefox add-on." />
 <link rel="canonical" href="https://firedreams.studio/" />
 <meta property="og:site_name" content="Firedreams Studio" />
 <meta property="og:title" content="Firedreams Studio" />
@@ -276,7 +276,7 @@ section { position: relative; }
 }
 @keyframes shimmer { from { transform: translateX(-100%); } to { transform: translateX(100%); } }
 .progress-note { font-size: 13px; color: var(--faint); margin-top: 10px; }
-html:not(.js) .progress-fill { width: 16%; }
+html:not(.js) .progress-fill { width: 19%; }
 
 /* the door */
 .door-stage { display: flex; justify-content: center; perspective: 900px; }
@@ -342,7 +342,7 @@ html:not(.js) .progress-fill { width: 16%; }
 }
 .door-caption { text-align: center; margin-top: 26px; font-size: 13px; color: var(--faint); font-style: italic; }
 
-/* ============ mobile ============ */
+/* ============ project cards ============ */
 .cards { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; }
 @media (max-width: 880px) { .cards { grid-template-columns: 1fr; } }
 .card {
@@ -358,6 +358,8 @@ html:not(.js) .progress-fill { width: 16%; }
 .card-top { display: flex; align-items: center; gap: 16px; margin-bottom: 18px; flex-wrap: wrap; }
 .app-icon { width: 58px; height: 58px; border-radius: 14px; box-shadow: 0 8px 22px rgba(0,0,0,0.5); border: 1px solid var(--line); }
 .card h3 { font-size: 27px; }
+.card-top > div { min-width: 0; }
+@media (max-width: 540px) { .card { padding: 28px 24px 0; } .card h3 { font-size: 25px; } .card-top { gap: 12px; } }
 .card .platform { font-size: 12.5px; color: var(--faint); letter-spacing: 0.12em; text-transform: uppercase; font-weight: 600; margin-top: 3px; }
 .card p { color: var(--muted); font-size: 15.5px; margin-bottom: 14px; }
 .card .chip { margin-left: auto; }
@@ -458,7 +460,7 @@ footer { border-top: 1px solid var(--line); padding: 54px 0 44px; }
 .foot .copy { color: var(--faint); font-size: 13.5px; }
 
 /* ============ anchors sit below the fixed nav ============ */
-section[id] { scroll-margin-top: 84px; }
+section[id], .card[id], .section-head[id], .tools-grid[id], .lab[id] { scroll-margin-top: 84px; }
 
 /* ============ status + card link helpers ============ */
 .dot.ship { background: #46d39a; box-shadow: 0 0 10px #46d39a; }
@@ -515,20 +517,21 @@ body.no-scroll { overflow: hidden; }
   .probe:hover .probe-zoom img { transform: none; }
 }
 
-/* ============ lily hop ============ */
-#more {
+/* ============ games ============ */
+#games {
   background:
     radial-gradient(80% 70% at 82% 16%, rgba(86, 220, 178, 0.10), transparent 60%),
     radial-gradient(70% 60% at 6% 94%, rgba(70, 120, 200, 0.10), transparent 60%),
     var(--bg-2);
   border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
 }
-.lily-grid { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 64px; align-items: center; }
-@media (max-width: 880px) { .lily-grid { grid-template-columns: 1fr; gap: 46px; } }
-.lily-copy h2 { font-size: clamp(38px, 5vw, 60px); margin: 18px 0 20px; }
-.lily-copy p { color: var(--muted); margin-bottom: 16px; max-width: 520px; }
-.lily-chips { display: flex; gap: 10px; flex-wrap: wrap; margin: 22px 0 30px; }
-.lily-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+#games .lab { margin-top: 32px; }
+.game-card { padding-bottom: 32px; }
+.game-details { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; margin-bottom: 38px; }
+.game-details .chip { margin-left: 0; }
+.game-link { font-size: 13px; color: var(--muted); text-underline-offset: 4px; }
+.game-link:hover { color: var(--ember-1); }
+.game-play { align-self: flex-start; margin-top: 24px; }
 .lily-stage { position: relative; perspective: 1000px; }
 .lily-frame { position: relative; overflow: hidden; border-radius: var(--radius); border: 1px solid var(--line); box-shadow: 0 30px 70px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(86, 220, 178, 0.12), 0 0 50px rgba(86, 220, 178, 0.08); aspect-ratio: 16 / 9; background: #05080d; transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.5s ease; }
 .lily-stage:hover .lily-frame { transform: translateY(-4px); box-shadow: 0 40px 80px rgba(0, 0, 0, 0.7); }
@@ -539,17 +542,18 @@ body.no-scroll { overflow: hidden; }
 .lily-ripple.r2 { animation-delay: 2.3s; }
 @keyframes ripple { 0% { width: 8px; height: 8px; opacity: 0.7; } 100% { width: 130px; height: 130px; opacity: 0; } }
 .lily-tag { position: absolute; left: 14px; bottom: 14px; z-index: 2; padding: 7px 13px; border-radius: 999px; font-size: 12px; font-weight: 600; letter-spacing: 0.04em; color: #bfeede; background: rgba(8, 20, 16, 0.6); border: 1px solid rgba(86, 220, 178, 0.4); backdrop-filter: blur(6px); box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4); }
-.lily-sticker { position: absolute; right: -26px; top: -26px; width: 152px; transform: rotate(6deg); transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1); }
+.lily-sticker { position: absolute; right: 10px; top: -22px; width: 132px; transform: rotate(6deg); transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1); }
 .lily-stage:hover .lily-sticker { transform: rotate(2deg) translateY(-6px) scale(1.03); }
 .lily-sticker img { border-radius: 10px; border: 1px solid rgba(148, 163, 210, 0.3); box-shadow: 0 18px 40px rgba(0, 0, 0, 0.6); }
 .lily-sticker figcaption { margin-top: 8px; text-align: center; font-size: 11.5px; color: var(--faint); font-style: italic; }
 @media (max-width: 880px) { .lily-sticker { right: 4px; top: -18px; width: 122px; } }
+@media (max-width: 540px) { .game-card { padding-bottom: 28px; } .lab { padding: 36px 24px; } .lab-art { width: min(100%, 330px); } }
 
 /* ============ firefox add-on ============ */
 #tools { background: var(--bg); }
-.tools-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+.tools-grid { margin-top: 64px; padding-top: 64px; border-top: 1px solid var(--line); display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
 @media (max-width: 880px) { .tools-grid { grid-template-columns: 1fr; gap: 46px; } }
-.tools-copy h2 { font-size: clamp(34px, 4.4vw, 50px); margin: 18px 0 8px; }
+.tools-copy h3 { font-size: clamp(34px, 4.4vw, 50px); margin: 18px 0 8px; }
 .tools-sub { color: var(--faint); font-size: 14px; letter-spacing: 0.04em; margin-bottom: 18px; }
 .tools-copy p { color: var(--muted); margin-bottom: 16px; max-width: 520px; }
 .tools-chips { display: flex; gap: 10px; flex-wrap: wrap; margin: 20px 0 28px; }
@@ -602,9 +606,8 @@ body.no-scroll { overflow: hidden; }
       Firedreams<span style="color: var(--ember-1);">&nbsp;Studio</span>
     </a>
     <div class="nav-links">
-      <a href="#datd">Games</a>
-      <a href="#mobile">Apps</a>
-      <a href="#more">More</a>
+      <a href="#games">Games</a>
+      <a href="#tools">Tools</a>
       <a href="#about">About</a>
       <a class="nav-cta" href="https://demonatthedoor.com/" target="_blank" rel="noopener">Demon At The Door</a>
     </div>
@@ -649,9 +652,9 @@ body.no-scroll { overflow: hidden; }
         <p class="reveal d2">A mansion in the woods. A town full of secrets. And something waiting at the door. Demon At The Door is an adult adventure game with gorgeous hand-drawn 2D art and a story that stays with you.</p>
         <p class="reveal d2">Early access opens on <strong style="color: var(--ink);">Patreon</strong> first, with wider store releases following as the game matures.</p>
         <div class="progress-block reveal d2">
-          <div class="progress-label"><span>Development progress</span><b>16%</b></div>
-          <div class="progress-track"><div class="progress-fill" data-progress="15"></div></div>
-          <p class="progress-note">Early access begins around the 20% mark. It is getting close.</p>
+          <div class="progress-label"><span>Development progress</span><b>19%</b></div>
+          <div class="progress-track"><div class="progress-fill" data-progress="19"></div></div>
+          <p class="progress-note">Patreon release imminent.</p>
         </div>
         <div class="reveal d3">
           <a class="btn btn-fire" href="https://demonatthedoor.com/" target="_blank" rel="noopener">Visit demonatthedoor.com ↗</a>
@@ -675,35 +678,15 @@ body.no-scroll { overflow: hidden; }
   </div>
 </section>
 
-<!-- ============ mobile ============ -->
-<section id="mobile" class="section-pad">
+<!-- ============ games ============ -->
+<section id="games" class="section-pad" aria-labelledby="games-heading">
   <div class="wrap">
     <div class="section-head">
-      <span class="eyebrow reveal">Mobile craft</span>
-      <h2 class="reveal d1">Being awesome <span class="grad-text">at all sizes.</span></h2>
-      <p class="reveal d2">Tools and games for your pocket. No ads, no tracking. With a fair price.</p>
+      <h2 class="grad-text reveal" id="games-heading">Games</h2>
+      <p class="reveal d2">Releases, demo's and concepts</p>
     </div>
     <div class="cards">
-      <div class="card reveal">
-        <div class="card-top">
-          <a class="app-icon-link" href="https://play.google.com/store/apps/details?id=studio.firedreams.level" target="_blank" rel="noopener" aria-label="Get Bubble Level on Google Play">
-            <img class="app-icon" src="assets/img/bubble_icon.webp" alt="Bubble Level app icon" width="58" height="58" loading="lazy" />
-          </a>
-          <div>
-            <h3><a class="card-title-link" href="https://play.google.com/store/apps/details?id=studio.firedreams.level" target="_blank" rel="noopener">Bubble Level<span class="go" aria-hidden="true">&#8599;</span></a></h3>
-            <div class="platform">Android</div>
-          </div>
-          <a class="chip" href="https://play.google.com/store/apps/developer?id=firedreams.studio" target="_blank" rel="noopener"><span class="dot ship"></span>Available on Google Play</a>
-        </div>
-        <p>A spirit level that feels like the real thing. Surface, edge and angle modes, a liquid bubble that splits and merges as you move, haptic and sound feedback when you hit level, and calibration you can trust.</p>
-        <div class="card-visual">
-          <div class="phones" aria-hidden="true">
-            <div class="phone back"><img src="assets/img/bubble_surface_dark.webp" alt="" loading="lazy" width="480" height="1029" /></div>
-            <div class="phone front"><img src="assets/img/bubble_edge_light.webp" alt="Bubble Level app, edge mode with liquid bubble vials" loading="lazy" width="480" height="1030" /></div>
-          </div>
-        </div>
-      </div>
-      <div class="card reveal d1">
+      <div class="card reveal" id="flags">
         <div class="card-top">
           <a class="app-icon-link" href="https://play.google.com/store/apps/details?id=studio.firedreams.flagsoftheworld" target="_blank" rel="noopener" aria-label="Get Flags of the World on Google Play">
             <img class="app-icon" src="assets/img/flags_app/flags_icon.webp" alt="Flags of the World app icon, a globe inside a golden trophy cup with two pennants" width="58" height="58" loading="lazy" />
@@ -723,10 +706,37 @@ body.no-scroll { overflow: hidden; }
           </div>
         </div>
       </div>
+      <div class="card game-card reveal d1" id="more">
+        <div class="card-top">
+          <div>
+            <h3><a class="card-title-link" href="https://firedreams.itch.io/lily-hop-demo" target="_blank" rel="noopener">Lily Hop<span class="go" aria-hidden="true">&#8599;</span></a></h3>
+            <div class="platform">Pond adventure</div>
+          </div>
+          <span class="chip"><span class="dot ship"></span>Playable demo</span>
+        </div>
+        <p>A little frog in a beautiful, dangerous pond. Realistic water, natural sound and hungry predators turn a hop between lily pads into a fight for survival.</p>
+        <div class="game-details">
+          <span class="chip award">&#9733; OpenAI Build Week</span>
+          <a class="game-link" href="https://devpost.com/software/lily-hop" target="_blank" rel="noopener">View on Devpost &#8599;</a>
+        </div>
+        <div class="card-visual lily-stage">
+          <div class="lily-frame">
+            <img src="assets/img/lily/lily_predator.webp" alt="Lily Hop: a photoreal frog splashes in dark water as a camouflaged predator rises between two lily pads" width="1400" height="788" loading="lazy" />
+            <span class="lily-ripple"></span>
+            <span class="lily-ripple r2"></span>
+            <span class="lily-tag">Real-time ripples</span>
+          </div>
+          <figure class="lily-sticker">
+            <img src="assets/img/lily/lily_title.webp" alt="Lily Hop title screen over a top-down pond" width="520" height="293" loading="lazy" />
+            <figcaption>Title screen</figcaption>
+          </figure>
+        </div>
+        <a class="btn btn-fire game-play" href="https://firedreams.itch.io/lily-hop-demo" target="_blank" rel="noopener">Play the demo on itch.io &#8599;</a>
+      </div>
     </div>
 
     <!-- concept lab -->
-    <div class="lab reveal" style="margin-top: 26px;">
+    <div class="lab reveal" id="capybara">
       <div class="stamp">Concept lab</div>
       <div>
         <span class="chip"><span class="dot concept"></span>Very early concept</span>
@@ -749,56 +759,59 @@ body.no-scroll { overflow: hidden; }
   </div>
 </section>
 
-<!-- ============ lily hop ============ -->
-<section id="more" class="section-pad">
+<!-- ============ tools ============ -->
+<section id="tools" class="section-pad" aria-labelledby="tools-heading">
   <div class="wrap">
-    <div class="lily-grid">
-      <div class="lily-copy">
-        <span class="eyebrow reveal">Competition entry</span>
-        <h2 class="reveal d1">Lily <span class="grad-text">Hop</span></h2>
-        <div class="lily-chips reveal d1">
-          <span class="chip award">&#9733; OpenAI Build Week</span>
-          <span class="chip"><span class="dot ship"></span>Demo on itch.io</span>
-          <span class="chip">Devpost submission</span>
-          <span class="chip">Godot 4.7</span>
-          <span class="chip">Custom water shader</span>
+    <div class="section-head" id="mobile">
+      <h2 class="grad-text reveal" id="tools-heading">Tools</h2>
+      <p class="reveal d2">Usefull releases on the google play store</p>
+    </div>
+    <div class="cards">
+      <div class="card reveal">
+        <div class="card-top">
+          <a class="app-icon-link" href="https://play.google.com/store/apps/details?id=studio.firedreams.level" target="_blank" rel="noopener" aria-label="Get Bubble Level on Google Play">
+            <img class="app-icon" src="assets/img/bubble_icon.webp" alt="Bubble Level app icon" width="58" height="58" loading="lazy" />
+          </a>
+          <div>
+            <h3><a class="card-title-link" href="https://play.google.com/store/apps/details?id=studio.firedreams.level" target="_blank" rel="noopener">Bubble Level<span class="go" aria-hidden="true">&#8599;</span></a></h3>
+            <div class="platform">Android</div>
+          </div>
+          <a class="chip" href="https://play.google.com/store/apps/developer?id=firedreams.studio" target="_blank" rel="noopener"><span class="dot ship"></span>Available on Google Play</a>
         </div>
-        <p class="reveal d2">A game with realistic graphics and sound design with a natural feel, make the player feel real danger for the creatures they control, and feel relaxed while they are eaten by a fish.</p>
-        <p class="reveal d2">Built for OpenAI's Build Week Competition and submitted on Devpost. A playable demo is up on itch.io.</p>
-        <div class="reveal d3 lily-actions">
-          <a class="btn btn-fire" href="https://firedreams.itch.io/lily-hop-demo" target="_blank" rel="noopener">
-            Play the demo on itch.io
-            <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M5 3h8v8M13 3 3 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
-          <a class="btn btn-ghost" href="https://devpost.com/software/lily-hop" target="_blank" rel="noopener">
-            See it on Devpost
-            <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M5 3h8v8M13 3 3 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
+        <p>A spirit level that feels like the real thing. Surface, edge and angle modes, a liquid bubble that splits and merges as you move, haptic and sound feedback when you hit level, and calibration you can trust.</p>
+        <div class="card-visual">
+          <div class="phones" aria-hidden="true">
+            <div class="phone back"><img src="assets/img/bubble_surface_dark.webp" alt="" loading="lazy" width="480" height="1029" /></div>
+            <div class="phone front"><img src="assets/img/bubble_edge_light.webp" alt="Bubble Level app, edge mode with liquid bubble vials" loading="lazy" width="480" height="1030" /></div>
+          </div>
         </div>
       </div>
-      <div class="lily-stage reveal d2">
-        <div class="lily-frame">
-          <img src="assets/img/lily/lily_predator.webp" alt="Lily Hop: a photoreal frog splashes in dark water as a camouflaged predator rises between two lily pads" width="1400" height="788" loading="lazy" />
-          <span class="lily-ripple"></span>
-          <span class="lily-ripple r2"></span>
-          <span class="lily-tag">Real-time ripples</span>
+      <div class="card reveal d1" id="multitimer">
+        <div class="card-top">
+          <a class="app-icon-link" href="https://play.google.com/store/apps/details?id=studio.firedreams.multitimerpro" target="_blank" rel="noopener" aria-label="Get MultiTimer Pro on Google Play">
+            <img class="app-icon" src="assets/img/multitimer/multitimer_icon.webp" alt="MultiTimer Pro app icon" width="58" height="58" loading="lazy" />
+          </a>
+          <div>
+            <h3><a class="card-title-link" href="https://play.google.com/store/apps/details?id=studio.firedreams.multitimerpro" target="_blank" rel="noopener">MultiTimer Pro<span class="go" aria-hidden="true">&#8599;</span></a></h3>
+            <div class="platform">Android</div>
+          </div>
+          <span class="chip"><span class="dot ship"></span>Available on Google Play</span>
         </div>
-        <figure class="lily-sticker">
-          <img src="assets/img/lily/lily_title.webp" alt="Lily Hop title screen over a top-down pond" width="520" height="293" loading="lazy" />
-          <figcaption>Title screen</figcaption>
-        </figure>
+        <p>Keep cooking, workouts and focus sessions on their own clock. Nine timer types, from countdowns and Pomodoro to intervals and chess, with colourful progress rings, custom alerts and timers that keep running in the background.</p>
+        <div class="card-visual">
+          <div class="phones" aria-hidden="true">
+            <div class="phone back"><img src="assets/img/multitimer/multitimer_interval.webp" alt="" loading="lazy" width="480" height="960" /></div>
+            <div class="phone front"><img src="assets/img/multitimer/multitimer_dashboard.webp" alt="MultiTimer Pro dashboard with five colourful timers for pasta, tea, focus, HIIT and a stopwatch" loading="lazy" width="480" height="960" /></div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
 
-<!-- ============ firefox add-on ============ -->
-<section id="tools" class="section-pad">
-  <div class="wrap">
-    <div class="tools-grid">
+    <!-- browser tool -->
+    <div class="tools-grid" id="browser-tool">
       <div class="tools-copy">
         <span class="eyebrow reveal">Browser tool</span>
-        <h2 class="reveal d1">Keep Reasoning <span class="grad-text">Closed</span></h2>
+        <h3 class="reveal d1">Keep Reasoning <span class="grad-text">Closed</span></h3>
         <p class="tools-sub reveal d1">for the llama.cpp web UI</p>
         <div class="tools-chips reveal d1">
           <span class="chip"><span class="dot ship"></span>Live on Firefox Add-ons</span>
@@ -856,7 +869,7 @@ body.no-scroll { overflow: hidden; }
         <p class="reveal d2">More to be announced soon.</p>
         <div class="about-stats reveal d3">
           <div class="stat"><b class="grad-text">1</b><span>Developer</span></div>
-          <div class="stat"><b class="grad-text">6</b><span>Projects</span></div>
+          <div class="stat"><b class="grad-text">7</b><span>Projects</span></div>
           <div class="stat"><b class="grad-text">&infin;</b><span>Late nights</span></div>
         </div>
       </div>

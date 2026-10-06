@@ -355,20 +355,22 @@ html:not(.js) .progress-fill { width: 19%; }
   transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
 }
 .card:hover { transform: translateY(-5px); border-color: rgba(255, 182, 80, 0.35); box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45); }
-.card-top { display: flex; align-items: center; gap: 16px; margin-bottom: 18px; flex-wrap: wrap; }
+.card-top { display: flex; align-items: center; gap: 16px; margin-bottom: 20px; }
+.app-icon-link { flex: none; }
 .app-icon { width: 58px; height: 58px; border-radius: 14px; box-shadow: 0 8px 22px rgba(0,0,0,0.5); border: 1px solid var(--line); }
 .card h3 { font-size: 27px; }
 .card-top > div { min-width: 0; }
 @media (max-width: 540px) { .card { padding: 28px 24px 0; } .card h3 { font-size: 25px; } .card-top { gap: 12px; } }
-.card .platform { font-size: 12.5px; color: var(--faint); letter-spacing: 0.12em; text-transform: uppercase; font-weight: 600; margin-top: 3px; }
+.card-meta { display: flex; align-items: center; gap: 6px 12px; flex-wrap: wrap; margin-top: 7px; }
+.card-meta .chip { padding: 3px 11px; font-size: 12px; }
+.card .platform { font-size: 12.5px; color: var(--faint); letter-spacing: 0.12em; text-transform: uppercase; font-weight: 600; }
 .card p { color: var(--muted); font-size: 15.5px; margin-bottom: 14px; }
-.card .chip { margin-left: auto; }
 .card-visual { margin-top: auto; }
 
 /* phone mockups */
 .phones { position: relative; height: 300px; margin-top: 26px; }
 .phone {
-  position: absolute; bottom: -60px; width: 168px;
+  position: absolute; top: 20px; width: 168px;
   border-radius: 26px; padding: 9px;
   background: #1a2138;
   border: 1px solid rgba(148, 163, 210, 0.3);
@@ -402,14 +404,15 @@ html:not(.js) .progress-fill { width: 19%; }
   display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: center;
   position: relative; overflow: hidden;
 }
+@media (min-width: 761px) { .lab-art { margin-right: 26px; } }
 @media (max-width: 760px) { .lab { grid-template-columns: 1fr; } .lab-art { width: 100%; max-width: 380px; margin: 12px auto 0; } }
 .lab h3 { font-size: 30px; margin: 14px 0 12px; }
 .lab p { color: var(--muted); font-size: 15.5px; max-width: 480px; }
 .lab .stamp {
-  position: absolute; top: 22px; right: -34px; transform: rotate(35deg);
-  font-size: 11px; font-weight: 700; letter-spacing: 0.3em; text-transform: uppercase;
+  position: absolute; top: 34px; right: -54px; width: 200px; transform: rotate(45deg);
+  font-size: 11px; line-height: 1; font-weight: 700; letter-spacing: 0.24em; text-align: center; text-transform: uppercase;
   color: rgba(86, 220, 178, 0.75); border: 1px solid rgba(86, 220, 178, 0.4);
-  padding: 5px 40px; background: rgba(86, 220, 178, 0.07);
+  padding: 5px 0; background: rgba(86, 220, 178, 0.07);
 }
 .lab-art { position: relative; width: 330px; transform: rotate(2.5deg); transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1); }
 .lab-art img {
@@ -528,7 +531,6 @@ body.no-scroll { overflow: hidden; }
 #games .lab { margin-top: 32px; }
 .game-card { padding-bottom: 32px; }
 .game-details { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; margin-bottom: 38px; }
-.game-details .chip { margin-left: 0; }
 .game-link { font-size: 13px; color: var(--muted); text-underline-offset: 4px; }
 .game-link:hover { color: var(--ember-1); }
 .game-play { align-self: flex-start; margin-top: 24px; }
@@ -683,7 +685,7 @@ body.no-scroll { overflow: hidden; }
   <div class="wrap">
     <div class="section-head">
       <h2 class="grad-text reveal" id="games-heading">Games</h2>
-      <p class="reveal d2">Releases, demo's and concepts</p>
+      <p class="reveal d2">Releases, demos and concepts</p>
     </div>
     <div class="cards">
       <div class="card reveal" id="flags">
@@ -693,9 +695,8 @@ body.no-scroll { overflow: hidden; }
           </a>
           <div>
             <h3><a class="card-title-link" href="https://play.google.com/store/apps/details?id=studio.firedreams.flagsoftheworld" target="_blank" rel="noopener">Flags of the World<span class="go" aria-hidden="true">&#8599;</span></a></h3>
-            <div class="platform">Android</div>
+            <div class="card-meta"><span class="platform">Android</span><a class="chip" href="https://play.google.com/store/apps/developer?id=firedreams.studio" target="_blank" rel="noopener"><span class="dot ship"></span>Available on Google Play</a></div>
           </div>
-          <a class="chip" href="https://play.google.com/store/apps/developer?id=firedreams.studio" target="_blank" rel="noopener"><span class="dot ship"></span>Available on Google Play</a>
         </div>
         <p>A bright, family-friendly flag quiz. 224 flags, three difficulties, sneaky lookalike rounds, arcade-style high scores and a falling-stars celebration when you get a perfect run. Fully offline.</p>
         <div class="card-visual">
@@ -710,9 +711,8 @@ body.no-scroll { overflow: hidden; }
         <div class="card-top">
           <div>
             <h3><a class="card-title-link" href="https://firedreams.itch.io/lily-hop-demo" target="_blank" rel="noopener">Lily Hop<span class="go" aria-hidden="true">&#8599;</span></a></h3>
-            <div class="platform">Pond adventure</div>
+            <div class="card-meta"><span class="platform">Pond adventure</span><span class="chip"><span class="dot ship"></span>Playable demo</span></div>
           </div>
-          <span class="chip"><span class="dot ship"></span>Playable demo</span>
         </div>
         <p>A little frog in a beautiful, dangerous pond. Realistic water, natural sound and hungry predators turn a hop between lily pads into a fight for survival.</p>
         <div class="game-details">
@@ -764,7 +764,7 @@ body.no-scroll { overflow: hidden; }
   <div class="wrap">
     <div class="section-head" id="mobile">
       <h2 class="grad-text reveal" id="tools-heading">Tools</h2>
-      <p class="reveal d2">Usefull releases on the google play store</p>
+      <p class="reveal d2">Useful releases on the Google Play Store</p>
     </div>
     <div class="cards">
       <div class="card reveal">
@@ -774,9 +774,8 @@ body.no-scroll { overflow: hidden; }
           </a>
           <div>
             <h3><a class="card-title-link" href="https://play.google.com/store/apps/details?id=studio.firedreams.level" target="_blank" rel="noopener">Bubble Level<span class="go" aria-hidden="true">&#8599;</span></a></h3>
-            <div class="platform">Android</div>
+            <div class="card-meta"><span class="platform">Android</span><a class="chip" href="https://play.google.com/store/apps/developer?id=firedreams.studio" target="_blank" rel="noopener"><span class="dot ship"></span>Available on Google Play</a></div>
           </div>
-          <a class="chip" href="https://play.google.com/store/apps/developer?id=firedreams.studio" target="_blank" rel="noopener"><span class="dot ship"></span>Available on Google Play</a>
         </div>
         <p>A spirit level that feels like the real thing. Surface, edge and angle modes, a liquid bubble that splits and merges as you move, haptic and sound feedback when you hit level, and calibration you can trust.</p>
         <div class="card-visual">
@@ -793,9 +792,8 @@ body.no-scroll { overflow: hidden; }
           </a>
           <div>
             <h3><a class="card-title-link" href="https://play.google.com/store/apps/details?id=studio.firedreams.multitimerpro" target="_blank" rel="noopener">MultiTimer Pro<span class="go" aria-hidden="true">&#8599;</span></a></h3>
-            <div class="platform">Android</div>
+            <div class="card-meta"><span class="platform">Android</span><a class="chip" href="https://play.google.com/store/apps/developer?id=firedreams.studio" target="_blank" rel="noopener"><span class="dot ship"></span>Available on Google Play</a></div>
           </div>
-          <span class="chip"><span class="dot ship"></span>Available on Google Play</span>
         </div>
         <p>Keep cooking, workouts and focus sessions on their own clock. Nine timer types, from countdowns and Pomodoro to intervals and chess, with colourful progress rings, custom alerts and timers that keep running in the background.</p>
         <div class="card-visual">

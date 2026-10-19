@@ -1,6 +1,6 @@
 TERMS OF SERVICE
 Firedreams Studio
-Last updated: September 2026
+Last updated: 19 October 2026
 
 1. WHO WE ARE
 
@@ -39,7 +39,7 @@ payment card details.
 
 Refunds follow the policy of the platform where you bought the product
 (for example, Steam's refund policy). If you bought directly from us
-and have a problem with your purchase, email [YOUR EMAIL] and we will
+and have a problem with your purchase, email dream@firedreams.studio and we will
 work it out. Your statutory consumer rights under Dutch and EU law
 apply in all cases. Under EU rules, the 14-day withdrawal right for
 digital content lapses once you start downloading or playing, if you

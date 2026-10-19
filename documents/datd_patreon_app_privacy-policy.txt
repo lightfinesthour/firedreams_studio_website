@@ -1,6 +1,6 @@
 PRIVACY POLICY
 Firedreams Studio
-Last updated: September 2026
+Last updated: 19 October 2026
 
 1. WHO WE ARE
 
@@ -40,29 +40,67 @@ We collect only the data needed to run our business:
 
 We do not sell your data. We do not share it with advertisers.
 
-4. THIRD-PARTY PLATFORMS
+4. PATRON PAGE AND PATRON EMAILS (DEMON AT THE DOOR)
+
+Patreon supporters of "Demon at the Door" get a patron page at
+patrons.demonatthedoor.com, where you log in with your Patreon account.
+To run it we receive from Patreon, and store:
+
+- Your Patreon member and user ID, name, email address, membership
+  status and tier.
+- Your Discord user ID, if you connected Discord in your Patreon
+  settings.
+
+When you use the service we also store:
+
+- Which game builds you downloaded, for which platform, and when.
+- Your votes in polls.
+- The name you choose for the game's special thanks (higher tiers only).
+  It stays in the credits after your membership ends.
+- Your choice to receive or skip new-build emails.
+- Copies of the emails and Discord messages we sent you.
+- A login cookie (valid up to 30 days) that keeps you signed in. The
+  page sets no tracking or advertising cookies.
+
+We use this to deliver your tier's downloads, votes, Special Gallery
+codes and credits, and to email you when you join, change tier or leave,
+and when a new build is out (you can switch build emails off on the
+patron page).
+
+Processors: the server provider that hosts the patron page, Brevo
+(Sendinblue SAS, France) which sends the emails, and Discord if you
+connected it. Nightly backups of the patron database are kept for 14
+days on the server and are also copied to the owner's computer.
+
+These records are kept after a membership ends, so a returning patron
+keeps their settings and credit name. Email us to have them deleted.
+Deletion covers the live data right away and backups as they roll over.
+
+5. THIRD-PARTY PLATFORMS
 
 If you buy from us or support us through a third-party platform (Steam,
 itch.io, Patreon, or similar), that platform processes your data under
 its own privacy policy. We only receive the information the platform
 shares with sellers and creators.
 
-5. LEGAL BASIS (GDPR)
+6. LEGAL BASIS (GDPR)
 
 We process personal data on these grounds:
 
-- Performance of a contract: delivering what you bought.
+- Performance of a contract: delivering what you bought, including
+  patron rewards and membership emails.
 - Legal obligation: tax and accounting records.
 - Consent: newsletters and optional updates. You can withdraw consent
   at any time.
 
-6. RETENTION
+7. RETENTION
 
 - Tax and sales records: 7 years, as required by Dutch law.
 - Email correspondence: up to 2 years after our last contact.
 - Newsletter subscriptions: until you unsubscribe.
+- Patron page records: see section 4.
 
-7. YOUR RIGHTS
+8. YOUR RIGHTS
 
 Under the GDPR you have the right to:
 
@@ -74,16 +112,16 @@ Under the GDPR you have the right to:
 - Lodge a complaint with the Dutch Data Protection Authority
   (Autoriteit Persoonsgegevens, autoriteitpersoonsgegevens.nl).
 
-To exercise any of these rights, email us at [YOUR EMAIL]. We respond
+To exercise any of these rights, email us at dream@firedreams.studio. We respond
 within 30 days.
 
-8. SECURITY
+9. SECURITY
 
 We store data on secured systems with access limited to the owner of
 Firedreams Studio. Accounts holding personal data use strong passwords
 and, where available, two-factor authentication.
 
-9. CHANGES
+10. CHANGES
 
 If we change this policy, we update the date at the top. For significant
 changes we will announce the update on our website or through the

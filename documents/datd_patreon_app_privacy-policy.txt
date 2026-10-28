@@ -1,6 +1,6 @@
 PRIVACY POLICY
 Firedreams Studio
-Last updated: 24 October 2026
+Last updated: 28 October 2026
 
 1. WHO WE ARE
 
@@ -42,14 +42,17 @@ We do not sell your data. We do not share it with advertisers.
 
 4. PATRON PAGE AND PATRON EMAILS (DEMON AT THE DOOR)
 
-Patreon supporters of "Demon at the Door" get a patron page at
-patrons.demonatthedoor.com, where you log in with your Patreon account.
-To run it we receive from Patreon, and store:
+Patreon members of "Demon at the Door", on a paid tier or the free
+tier, get a patron page at patrons.demonatthedoor.com, where you log in
+with your Patreon account. To run it we receive from Patreon, and store:
 
 - Your Patreon member and user ID, name, email address, membership
   status and tier.
 - Your Discord user ID, if you connected Discord in your Patreon
   settings.
+
+This includes free members: we store this record when you join the free
+tier on Patreon, whether or not you visit the patron page.
 
 When you use the service we also store:
 
@@ -65,7 +68,9 @@ When you use the service we also store:
 We use this to deliver your tier's downloads, votes, Special Gallery
 codes and credits, and to email you when you join, change tier or leave,
 and when a new build is out (you can switch build emails off on the
-patron page).
+patron page). Free members get the patron page and can vote in polls
+that are open to them; we send free members no emails or Discord
+messages.
 
 Processors: the server provider that hosts the patron page, Brevo
 (Sendinblue SAS, France) which sends the emails, and Discord if you
@@ -140,6 +145,9 @@ We process personal data on these grounds:
 - Legitimate interest: anonymous play statistics in the game (section
   5), to understand how the game is played and improve it. You can
   object at any time by switching statistics off in the game.
+- Legitimate interest: the record of free Patreon members (section 4),
+  so they can use the patron page and vote in polls open to them. You
+  can ask us to delete it at any time.
 
 8. RETENTION
 

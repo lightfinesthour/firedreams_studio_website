@@ -1,0 +1,59 @@
+PRIVACY POLICY FOR ANIMAL TREASURE
+==================================
+
+App:         Animal Treasure (studio.firedreams.animalfinder)
+Developer:   Firedreams Studio
+Contact:     dream@firedreams.studio
+Effective:   9 November 2026
+Last update: 9 November 2026
+
+
+SUMMARY
+-------
+Animal Treasure is a picture and sound game for young children. It
+collects no data. None. The app has no internet access, no accounts,
+no ads, no analytics, no tracking, no in-app purchases and no
+third-party services.
+
+
+DETAILS
+-------
+
+1. Data collection
+   Animal Treasure does not ask for, collect, store or transmit any
+   personal data or any other data. The app requests no permissions at
+   all (no internet, camera, microphone, location or contacts), so it
+   is technically unable to send anything off your device.
+
+2. Game content
+   All photos, sounds, voices and pictures are bundled inside the app
+   itself. Nothing is downloaded, and no request ever leaves your
+   device while your child plays.
+
+3. Settings and sticker book
+   Two things are saved, on your device only:
+   - the parent settings (language, volume, difficulty, which animal
+     groups are shown and the other options in the parent area);
+   - the sticker book (which stickers have been won, where they are
+     stuck, and a counter of playing time used to hand out new
+     stickers).
+   They are never sent anywhere, and they are deleted when you
+   uninstall the app.
+
+4. Third parties
+   The app contains no advertising, no analytics, and no third-party
+   code that collects data. Distribution of the app is handled entirely
+   by Google Play; see Google's privacy policy for how Google processes
+   downloads.
+
+5. Children
+   The app is made for young children. Since no data is collected from
+   anyone, no data is collected from children. The parent settings are
+   behind a parent gate (press and hold the gear button).
+
+6. Changes
+   If this policy ever changes, the new version will be published at
+   this same address with an updated date.
+
+7. Contact
+   Questions? Email dream@firedreams.studio.

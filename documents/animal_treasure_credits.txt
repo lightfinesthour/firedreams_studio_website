@@ -2233,8 +2233,5 @@ zebra_s102.ogg: "Geopelia striata - Zebra Dove XC347811.mp3" by Derek Paulo, CC 
 zebra_s103.ogg: "Grévys zebra (Sound Effects).ogg" by DiegoC472, CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0), https://commons.wikimedia.org/wiki/File:Gr%C3%A9vys_zebra_(Sound_Effects).ogg
 zebra_s104.ogg: "Grévys zebra (Sound Effects).ogg" by DiegoC472, CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0), https://commons.wikimedia.org/wiki/File:Gr%C3%A9vys_zebra_(Sound_Effects).ogg
 
-Animal sounds without a usable recording, generated with Stable Audio 3.0 Medium (Stability AI Community License): alpaca, arctic_fox, baboon, baby_goat, beluga, bison, black_bear, blue_footed_booby, budgie, buffalo, camel, cheetah, chinchilla, crocodile, dolphin, dragonfly, dromedary, fennec_fox, ferret, fly, foal, goat, gorilla, hamster, hare, hyrax, ibex, kangaroo, kitten, lamb, leopard, llama, meerkat, moose, moth, mountain_goat, mule, musk_ox, orangutan, ostrich, piglet, poison_dart_frog, polar_bear, ptarmigan, puffin, puppy, rat, reindeer, sea_otter, seal, snake, snow_leopard, snowy_owl, stoat, tapir, tasmanian_devil, tiger, walrus, warthog, wasp, wild_dog, wildebeest, yak
-
-VOICE: generated with Qwen3-TTS (Apache-2.0); Dutch and Indonesian with Google Cloud Text-to-Speech (Chirp 3 HD).
 FONTS: Nunito, Noto Sans SC/JP/KR - SIL Open Font License 1.1 (see fonts/OFL-*.txt).
 ENGINE: Godot Engine, MIT licence.

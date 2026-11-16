@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Firedreams Studio, handcrafted games and apps</title>
+<meta name="description" content="Firedreams Studio is a one-person indie studio crafting story-rich games and beautifully polished mobile apps. Home of Bubble Level, Flags of the World, MultiTimer Pro, the Lily Hop game jam entry and the Keep Reasoning Closed Firefox add-on." />
+<link rel="canonical" href="https://firedreams.studio/" />
+<meta property="og:site_name" content="Firedreams Studio" />
+<meta property="og:title" content="Firedreams Studio" />
+<meta property="og:description" content="A one-person indie studio crafting story-rich games and beautifully polished mobile apps." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://firedreams.studio/" />
+<meta property="og:image" content="https://firedreams.studio/assets/img/og_image.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="theme-color" content="#06080f" />
+<link rel="icon" type="image/png" sizes="64x64" href="assets/img/favicon-64.png" />
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
+<link rel="preload" href="assets/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Firedreams Studio",
+  "url": "https://firedreams.studio/",
+  "logo": "https://firedreams.studio/assets/img/apple-touch-icon.png",
+  "description": "A one-person indie studio crafting story-rich games and polished mobile apps.",
+  "sameAs": [
+    "https://firedreams.itch.io/",
+    "https://play.google.com/store/apps/developer?id=firedreams.studio",
+    "https://addons.mozilla.org/en-US/firefox/addon/reasoning-closed-for-llama-cpp/"
+  ]
+}
+</script>
+<style>
+@font-face {
+  font-family: 'Fraunces';
+  font-style: italic;
+  font-weight: 300 600;
+  font-display: swap;
+  src: url("assets/fonts/fraunces-latin-ext-italic.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Fraunces';
+  font-style: italic;
+  font-weight: 300 600;
+  font-display: swap;
+  src: url("assets/fonts/fraunces-latin-italic.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 300 600;
+  font-display: swap;
+  src: url("assets/fonts/fraunces-latin-ext.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 300 600;
+  font-display: swap;
+  src: url("assets/fonts/fraunces-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url("assets/fonts/inter-latin-ext.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url("assets/fonts/inter-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* ============ base ============ */
+:root {
+  --bg: #06080f;
+  --bg-2: #0a0f1d;
+  --panel: #0e1426;
+  --panel-2: #121a30;
+  --line: rgba(148, 163, 210, 0.14);
+  --ink: #eef1fa;
+  --muted: #9aa5c2;
+  --faint: #6b7694;
+  --ember-1: #ffb650;
+  --ember-2: #ff6a3a;
+  --ember-3: #ff3d81;
+  --violet: #8f7bff;
+  --violet-soft: rgba(143, 123, 255, 0.16);
+  --ember-grad: linear-gradient(100deg, var(--ember-1), var(--ember-2) 45%, var(--ember-3));
+  --radius: 22px;
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; overflow-x: clip; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.65;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+img, video { max-width: 100%; display: block; }
+img { height: auto; }
+a { color: inherit; }
+::selection { background: rgba(255, 106, 58, 0.35); }
+
+h1, h2, h3 { font-family: var(--font-display); font-weight: 500; line-height: 1.08; letter-spacing: -0.01em; }
+
+.wrap { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+
+.eyebrow {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-size: 12.5px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--ember-1);
+}
+.eyebrow::before { content: ""; width: 26px; height: 1px; background: var(--ember-2); }
+
+.grad-text {
+  background: var(--ember-grad);
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent; color: transparent;
+}
+
+.chip {
+  display: inline-flex; align-items: center; gap: 7px;
+  padding: 5px 13px; border-radius: 999px;
+  font-size: 12.5px; font-weight: 600; letter-spacing: 0.04em;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--muted);
+  white-space: nowrap;
+  text-decoration: none;
+}
+a.chip:hover { border-color: rgba(255, 182, 80, 0.5); color: var(--ink); }
+.chip .dot { width: 7px; height: 7px; border-radius: 50%; }
+.dot.live { background: #ffb650; box-shadow: 0 0 10px #ff6a3a; animation: pulse 2.2s infinite; }
+.dot.next { background: var(--violet); box-shadow: 0 0 10px var(--violet); }
+.dot.concept { background: #56dcb2; box-shadow: 0 0 10px #56dcb2; }
+@keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.35; } }
+
+.btn {
+  display: inline-flex; align-items: center; gap: 9px;
+  padding: 14px 26px; border-radius: 14px;
+  font-weight: 600; font-size: 15.5px; text-decoration: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease, border-color 0.25s ease;
+}
+.btn-fire {
+  background: var(--ember-grad);
+  color: #170a06;
+  box-shadow: 0 8px 30px rgba(255, 106, 58, 0.35);
+}
+.btn-fire:hover { transform: translateY(-2px); box-shadow: 0 14px 40px rgba(255, 106, 58, 0.5); }
+.btn svg { flex: none; }
+
+/* reveal on scroll (hidden state only when JS is running) */
+.reveal { transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.22, 1, 0.36, 1); }
+html.js .reveal { opacity: 0; transform: translateY(28px); }
+html.js .reveal.in { opacity: 1; transform: none; }
+.reveal.d1 { transition-delay: 0.1s; } .reveal.d2 { transition-delay: 0.2s; } .reveal.d3 { transition-delay: 0.3s; }
+
+/* ============ nav ============ */
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 50;
+  transition: background 0.4s ease, border-color 0.4s ease;
+  border-bottom: 1px solid transparent;
+}
+.nav.scrolled { background: rgba(6, 8, 15, 0.78); backdrop-filter: blur(14px); border-bottom-color: var(--line); }
+.nav-inner { display: flex; align-items: center; justify-content: space-between; height: 68px; }
+.brand { display: flex; align-items: center; gap: 11px; text-decoration: none; font-weight: 700; font-size: 16.5px; letter-spacing: 0.01em; }
+.brand .flame { width: 26px; height: 26px; }
+.nav-links { display: flex; align-items: center; gap: 30px; }
+.nav-links a { text-decoration: none; font-size: 14.5px; font-weight: 500; color: var(--muted); transition: color 0.2s; }
+.nav-links a:hover { color: var(--ink); }
+@media (max-width: 720px) { .nav-links { display: none; } }
+
+/* ============ hero ============ */
+.hero { position: relative; min-height: 100svh; display: flex; align-items: center; overflow: hidden; }
+.hero video, .hero .poster {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  object-fit: cover; object-position: center 62%;
+}
+.hero .veil {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(120% 90% at 50% 105%, rgba(255, 106, 58, 0.18), transparent 55%),
+    linear-gradient(180deg, rgba(6, 8, 15, 0.68) 0%, rgba(8, 11, 24, 0.45) 45%, rgba(6, 8, 15, 0.94) 100%),
+    linear-gradient(115deg, rgba(19, 15, 48, 0.55), rgba(6, 8, 15, 0.1) 60%);
+}
+#embers { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+.hero-content { position: relative; z-index: 2; padding: 140px 0 120px; max-width: 780px; }
+.hero h1 {
+  font-size: clamp(46px, 7.4vw, 92px);
+  font-weight: 400;
+  margin: 22px 0 26px;
+  text-shadow: 0 4px 40px rgba(0, 0, 0, 0.55);
+}
+.hero h1 em { font-style: italic; font-weight: 300; }
+.hero p.lede { font-size: clamp(17px, 2vw, 20px); color: #c6cde2; max-width: 560px; text-shadow: 0 2px 18px rgba(0, 0, 0, 0.6); }
+.hero-ctas { display: flex; gap: 14px; margin-top: 38px; flex-wrap: wrap; }
+.scroll-hint {
+  position: absolute; bottom: 26px; left: 50%; transform: translateX(-50%);
+  z-index: 2; color: var(--faint); font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase;
+  display: flex; flex-direction: column; align-items: center; gap: 8px; text-decoration: none;
+}
+.scroll-hint span.line { width: 1px; height: 34px; background: linear-gradient(var(--ember-2), transparent); animation: drip 2s infinite; }
+@keyframes drip { 0% { transform: scaleY(0); transform-origin: top; } 60% { transform: scaleY(1); } 100% { opacity: 0; transform: scaleY(1); } }
+
+/* ============ sections ============ */
+section { position: relative; }
+.section-pad { padding: 110px 0; }
+.section-head { max-width: 720px; margin-bottom: 60px; }
+.section-head h2 { font-size: clamp(32px, 4.6vw, 52px); margin: 18px 0 16px; }
+.section-head p { color: var(--muted); font-size: 17.5px; }
+
+/* ============ project cards ============ */
+.cards { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; }
+@media (max-width: 880px) { .cards { grid-template-columns: 1fr; } }
+.card {
+  position: relative; overflow: hidden;
+  background: linear-gradient(165deg, var(--panel-2), var(--panel) 60%);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 40px 38px 0;
+  display: flex; flex-direction: column;
+  transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+}
+.card:hover { transform: translateY(-5px); border-color: rgba(255, 182, 80, 0.35); box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45); }
+.card-top { display: flex; align-items: center; gap: 16px; margin-bottom: 20px; }
+.app-icon-link { flex: none; }
+.app-icon { width: 58px; height: 58px; border-radius: 14px; box-shadow: 0 8px 22px rgba(0,0,0,0.5); border: 1px solid var(--line); }
+.card h3 { font-size: 27px; }
+.card-top > div { min-width: 0; }
+@media (max-width: 540px) { .card { padding: 28px 24px 0; } .card h3 { font-size: 25px; } .card-top { gap: 12px; } }
+.card-meta { display: flex; align-items: center; gap: 6px 12px; flex-wrap: wrap; margin-top: 7px; }
+.card-meta .chip { padding: 3px 11px; font-size: 12px; }
+.card .platform { font-size: 12.5px; color: var(--faint); letter-spacing: 0.12em; text-transform: uppercase; font-weight: 600; }
+.card p { color: var(--muted); font-size: 15.5px; margin-bottom: 14px; }
+.card-visual { margin-top: auto; }
+
+/* phone mockups */
+.phones { position: relative; height: 300px; margin-top: 26px; }
+.phone {
+  position: absolute; top: 20px; width: 168px;
+  border-radius: 26px; padding: 9px;
+  background: #1a2138;
+  border: 1px solid rgba(148, 163, 210, 0.3);
+  box-shadow: 0 26px 60px rgba(0, 0, 0, 0.6);
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.phone img { border-radius: 18px; }
+.phone.front { left: 50%; transform: translateX(-78%) rotate(-4deg); z-index: 2; }
+.phone.back  { left: 50%; transform: translateX(-14%) rotate(6deg) scale(0.94); opacity: 0.92; }
+.card:hover .phone.front { transform: translateX(-78%) rotate(-6deg) translateY(-10px); }
+.card:hover .phone.back  { transform: translateX(-14%) rotate(8deg) scale(0.94) translateY(-6px); }
+
+/* flags card reuses the phone mockups; HI-SCORE badge positioned over them */
+.hiscore {
+  position: absolute; top: 8px; right: 6px; z-index: 2;
+  font-family: var(--font-display); font-style: italic; font-size: 15px;
+  padding: 8px 16px; border-radius: 12px;
+  background: rgba(6, 8, 15, 0.82); border: 1px solid rgba(255, 182, 80, 0.4);
+  color: var(--ember-1); backdrop-filter: blur(4px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* ============ concept lab ============ */
+.lab {
+  border: 1px dashed rgba(86, 220, 178, 0.35);
+  border-radius: var(--radius);
+  background:
+    radial-gradient(60% 100% at 100% 0%, rgba(86, 220, 178, 0.06), transparent 60%),
+    var(--panel);
+  padding: 46px 44px;
+  display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: center;
+  position: relative; overflow: hidden;
+}
+@media (min-width: 761px) { .lab-art { margin-right: 26px; } }
+@media (max-width: 760px) { .lab { grid-template-columns: 1fr; } .lab-art { width: 100%; max-width: 380px; margin: 12px auto 0; } }
+.lab h3 { font-size: 30px; margin: 14px 0 12px; }
+.lab p { color: var(--muted); font-size: 15.5px; max-width: 480px; }
+.lab .stamp {
+  position: absolute; top: 34px; right: -54px; width: 200px; transform: rotate(45deg);
+  font-size: 11px; line-height: 1; font-weight: 700; letter-spacing: 0.24em; text-align: center; text-transform: uppercase;
+  color: rgba(86, 220, 178, 0.75); border: 1px solid rgba(86, 220, 178, 0.4);
+  padding: 5px 0; background: rgba(86, 220, 178, 0.07);
+}
+.lab-art { position: relative; width: 330px; transform: rotate(2.5deg); transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1); }
+.lab-art img {
+  border-radius: 12px;
+  border: 1px solid rgba(148, 163, 210, 0.28);
+  box-shadow: 0 22px 50px rgba(0, 0, 0, 0.55);
+}
+.lab:hover .lab-art { transform: rotate(0.5deg) scale(1.02); }
+.lab-art::before, .lab-art::after {
+  content: ""; position: absolute; top: -11px; width: 72px; height: 24px;
+  background: rgba(220, 240, 235, 0.16);
+  border: 1px solid rgba(220, 240, 235, 0.12);
+  backdrop-filter: blur(2px);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+}
+.lab-art::before { left: -18px; transform: rotate(-38deg); }
+.lab-art::after { right: -18px; transform: rotate(38deg); }
+.lab-art figcaption { text-align: center; margin-top: 16px; font-size: 12.5px; color: var(--faint); font-style: italic; }
+
+/* ============ about ============ */
+#about { background: var(--bg-2); border-top: 1px solid var(--line); }
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 70px; align-items: center; }
+@media (max-width: 880px) { .about-grid { grid-template-columns: 1fr; gap: 44px; } }
+.about-copy p { color: var(--muted); margin-bottom: 16px; }
+.about-stats { display: flex; gap: 38px; margin-top: 34px; flex-wrap: wrap; }
+.stat b { display: block; font-family: var(--font-display); font-size: 38px; font-weight: 500; }
+.stat span { font-size: 13px; color: var(--faint); letter-spacing: 0.08em; text-transform: uppercase; }
+.about-visual { position: relative; }
+.about-visual video, .about-visual img.fallback {
+  border-radius: var(--radius); border: 1px solid var(--line);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.55);
+  width: 100%; aspect-ratio: 16 / 10; object-fit: cover;
+}
+.badge-float {
+  position: absolute; right: -22px; bottom: -30px; width: 118px; height: 118px;
+  filter: drop-shadow(0 14px 30px rgba(0, 0, 0, 0.6));
+  animation: floaty 5s ease-in-out infinite;
+}
+@keyframes floaty { 0%,100% { transform: translateY(0) rotate(-4deg); } 50% { transform: translateY(-9px) rotate(2deg); } }
+@media (max-width: 880px) { .badge-float { right: 4px; bottom: -24px; width: 92px; height: 92px; } }
+
+/* ============ footer ============ */
+footer { border-top: 1px solid var(--line); padding: 54px 0 44px; }
+.foot { display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; }
+.foot-links { display: flex; gap: 26px; flex-wrap: wrap; }
+.foot a { color: var(--muted); text-decoration: none; font-size: 14.5px; transition: color 0.2s; }
+.foot a:hover { color: var(--ember-1); }
+.foot .copy { color: var(--faint); font-size: 13.5px; }
+
+/* ============ anchors sit below the fixed nav ============ */
+section[id], .card[id], .section-head[id], .tools-grid[id], .lab[id] { scroll-margin-top: 84px; }
+
+/* ============ status + card link helpers ============ */
+.dot.ship { background: #46d39a; box-shadow: 0 0 10px #46d39a; }
+.chip.award { border-color: rgba(255, 182, 80, 0.5); color: var(--ember-1); background: rgba(255, 182, 80, 0.08); }
+.app-icon-link { display: inline-block; border-radius: 14px; line-height: 0; }
+.app-icon-link:hover { outline: 2px solid rgba(255, 182, 80, 0.5); outline-offset: 2px; }
+.card-title-link { text-decoration: none; display: inline-flex; align-items: center; gap: 8px; transition: color 0.2s; }
+.card-title-link:hover { color: var(--ember-1); }
+.card-title-link .go { opacity: 0; transform: translateX(-4px); color: var(--ember-2); transition: opacity 0.2s ease, transform 0.2s ease; }
+.card:hover .card-title-link .go { opacity: 1; transform: none; }
+
+/* ============ capybara in-engine probes ============ */
+.lab-probes { grid-column: 1 / -1; margin-top: 38px; padding-top: 26px; border-top: 1px dashed rgba(86, 220, 178, 0.25); }
+.lab-probes-label { display: block; margin-bottom: 14px; font-size: 11px; font-weight: 700; letter-spacing: 0.28em; text-transform: uppercase; color: rgba(86, 220, 178, 0.72); }
+.lab-probes-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+@media (max-width: 620px) { .lab-probes-grid { grid-template-columns: 1fr; } }
+.probe { overflow: hidden; border-radius: 12px; border: 1px solid rgba(148, 163, 210, 0.22); background: #070b14; box-shadow: 0 14px 30px rgba(0, 0, 0, 0.45); transition: transform 0.35s ease, border-color 0.35s ease; }
+.probe:hover { transform: translateY(-5px); border-color: rgba(86, 220, 178, 0.45); }
+.probe img { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+.probe figcaption { padding: 8px 12px 10px; font-size: 11.5px; color: var(--faint); font-style: italic; }
+
+/* ============ probe zoom + screenshot lightbox ============ */
+.probe-zoom { display: block; width: 100%; padding: 0; border: 0; background: none; font: inherit; cursor: zoom-in; position: relative; }
+.probe-zoom img { transition: transform 0.45s ease; }
+.probe:hover .probe-zoom img { transform: scale(1.045); }
+.probe-zoom:focus-visible { outline: 2px solid rgba(86, 220, 178, 0.7); outline-offset: -2px; }
+.probe-hint { position: absolute; right: 8px; bottom: 8px; display: inline-flex; align-items: center; gap: 5px; padding: 5px 9px; border-radius: 999px; background: rgba(5, 9, 17, 0.85); border: 1px solid rgba(86, 220, 178, 0.4); color: rgb(86, 220, 178); font-size: 10px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; opacity: 0; transform: translateY(4px); transition: opacity 0.25s ease, transform 0.25s ease; pointer-events: none; }
+.probe:hover .probe-hint, .probe-zoom:focus-visible .probe-hint { opacity: 1; transform: none; }
+
+.lightbox { position: fixed; inset: 0; z-index: 200; display: flex; align-items: center; justify-content: center; }
+.lightbox[hidden] { display: none; }
+.lb-backdrop { position: absolute; inset: 0; background: rgba(4, 7, 14, 0.93); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
+.lb-stage { position: relative; margin: 0; display: flex; flex-direction: column; align-items: center; gap: 14px; max-width: min(1180px, 92vw); animation: lbIn 0.32s cubic-bezier(0.2, 0.8, 0.3, 1); }
+.lb-stage img { max-width: 100%; max-height: 76vh; border-radius: 10px; border: 1px solid rgba(86, 220, 178, 0.35); background: #070b14; box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6); }
+.lb-caption { display: flex; align-items: baseline; gap: 12px; font-size: 13px; font-style: italic; color: var(--muted); }
+.lb-count { font-style: normal; font-size: 10.5px; font-weight: 700; letter-spacing: 0.24em; color: rgba(86, 220, 178, 0.9); }
+.lb-btn { position: absolute; z-index: 2; display: grid; place-items: center; width: 42px; height: 42px; border-radius: 50%; border: 1px solid rgba(148, 163, 210, 0.28); background: rgba(10, 15, 30, 0.72); color: var(--muted); cursor: pointer; transition: color 0.2s, border-color 0.2s, background 0.2s, transform 0.2s; }
+.lb-btn:hover, .lb-btn:focus-visible { color: #fff; border-color: rgba(86, 220, 178, 0.6); background: rgba(86, 220, 178, 0.14); }
+.lb-close { top: 20px; right: 20px; }
+.lb-nav { top: 50%; transform: translateY(-50%); }
+.lb-nav:hover, .lb-nav:focus-visible { transform: translateY(-50%) scale(1.08); }
+.lb-prev { left: 18px; }
+.lb-next { right: 18px; }
+body.no-scroll { overflow: hidden; }
+@keyframes lbIn { from { opacity: 0; transform: scale(0.94) translateY(10px); } to { opacity: 1; transform: none; } }
+@media (max-width: 640px) {
+  .lb-nav { width: 36px; height: 36px; }
+  .lb-prev { left: 8px; }
+  .lb-next { right: 8px; }
+  .lb-caption { padding: 0 44px; text-align: center; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .lb-stage { animation: none; }
+  .probe:hover .probe-zoom img { transform: none; }
+}
+
+/* ============ games ============ */
+#games {
+  background:
+    radial-gradient(80% 70% at 82% 16%, rgba(86, 220, 178, 0.10), transparent 60%),
+    radial-gradient(70% 60% at 6% 94%, rgba(70, 120, 200, 0.10), transparent 60%),
+    var(--bg-2);
+  border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+}
+#games .lab { margin-top: 32px; }
+.game-card { padding-bottom: 32px; }
+.game-details { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; margin-bottom: 38px; }
+.game-link { font-size: 13px; color: var(--muted); text-underline-offset: 4px; }
+.game-link:hover { color: var(--ember-1); }
+.game-play { align-self: flex-start; margin-top: 24px; }
+.lily-stage { position: relative; perspective: 1000px; }
+.lily-frame { position: relative; overflow: hidden; border-radius: var(--radius); border: 1px solid var(--line); box-shadow: 0 30px 70px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(86, 220, 178, 0.12), 0 0 50px rgba(86, 220, 178, 0.08); aspect-ratio: 16 / 9; background: #05080d; transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.5s ease; }
+.lily-stage:hover .lily-frame { transform: translateY(-4px); box-shadow: 0 40px 80px rgba(0, 0, 0, 0.7); }
+.lily-frame img { width: 100%; height: 100%; object-fit: cover; filter: brightness(1.14) saturate(1.12) contrast(1.02); transition: transform 6s ease; }
+.lily-frame:hover img { transform: scale(1.06); }
+.lily-frame::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(180deg, transparent 52%, rgba(5, 8, 13, 0.5)); }
+.lily-ripple { position: absolute; left: 31%; top: 66%; width: 8px; height: 8px; border-radius: 50%; border: 1px solid rgba(190, 230, 210, 0.55); transform: translate(-50%, -50%); pointer-events: none; animation: ripple 4.6s ease-out infinite; }
+.lily-ripple.r2 { animation-delay: 2.3s; }
+@keyframes ripple { 0% { width: 8px; height: 8px; opacity: 0.7; } 100% { width: 130px; height: 130px; opacity: 0; } }
+.lily-tag { position: absolute; left: 14px; bottom: 14px; z-index: 2; padding: 7px 13px; border-radius: 999px; font-size: 12px; font-weight: 600; letter-spacing: 0.04em; color: #bfeede; background: rgba(8, 20, 16, 0.6); border: 1px solid rgba(86, 220, 178, 0.4); backdrop-filter: blur(6px); box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4); }
+.lily-sticker { position: absolute; right: 10px; top: -22px; width: 132px; transform: rotate(6deg); transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1); }
+.lily-stage:hover .lily-sticker { transform: rotate(2deg) translateY(-6px) scale(1.03); }
+.lily-sticker img { border-radius: 10px; border: 1px solid rgba(148, 163, 210, 0.3); box-shadow: 0 18px 40px rgba(0, 0, 0, 0.6); }
+.lily-sticker figcaption { margin-top: 8px; text-align: center; font-size: 11.5px; color: var(--faint); font-style: italic; }
+@media (max-width: 880px) { .lily-sticker { right: 4px; top: -18px; width: 122px; } }
+@media (max-width: 540px) { .game-card { padding-bottom: 28px; } .lab { padding: 36px 24px; } .lab-art { width: min(100%, 330px); } }
+
+/* ============ firefox add-on ============ */
+#tools { background: var(--bg); }
+.tools-grid { margin-top: 64px; padding-top: 64px; border-top: 1px solid var(--line); display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+@media (max-width: 880px) { .tools-grid { grid-template-columns: 1fr; gap: 46px; } }
+.tools-copy h3 { font-size: clamp(34px, 4.4vw, 50px); margin: 18px 0 8px; }
+.tools-sub { color: var(--faint); font-size: 14px; letter-spacing: 0.04em; margin-bottom: 18px; }
+.tools-copy p { color: var(--muted); margin-bottom: 16px; max-width: 520px; }
+.tools-chips { display: flex; gap: 10px; flex-wrap: wrap; margin: 20px 0 28px; }
+.tools-visual { position: relative; }
+.bulb-badge { position: absolute; right: -12px; top: -24px; z-index: 3; width: 86px; height: 86px; filter: drop-shadow(0 10px 26px rgba(70, 150, 255, 0.5)); -webkit-mask: radial-gradient(125% 125% at 50% 42%, #000 66%, transparent 100%); mask: radial-gradient(125% 125% at 50% 42%, #000 66%, transparent 100%); animation: floaty 6s ease-in-out infinite; }
+.browser { overflow: hidden; border-radius: 16px; border: 1px solid var(--line); background: linear-gradient(180deg, #11182b, #0b1120); box-shadow: 0 26px 60px rgba(0, 0, 0, 0.55); }
+.browser-bar { display: flex; align-items: center; gap: 10px; padding: 11px 14px; background: rgba(255, 255, 255, 0.03); border-bottom: 1px solid var(--line); }
+.browser-bar .tl { display: flex; gap: 6px; }
+.browser-bar .tl i { width: 11px; height: 11px; border-radius: 50%; }
+.browser-bar .tl i:nth-child(1) { background: #ff5f57; }
+.browser-bar .tl i:nth-child(2) { background: #febc2e; }
+.browser-bar .tl i:nth-child(3) { background: #28c840; }
+.browser-bar .url { flex: 1; overflow: hidden; padding: 6px 12px; border-radius: 8px; background: rgba(0, 0, 0, 0.3); border: 1px solid var(--line); color: var(--faint); font-size: 12.5px; white-space: nowrap; text-overflow: ellipsis; }
+.browser-bar .ext { flex: none; width: 24px; height: 24px; border-radius: 7px; box-shadow: 0 0 0 1px var(--line); }
+.browser-body { padding: 18px 18px 22px; font-size: 14px; }
+.msg { max-width: 88%; margin-bottom: 12px; padding: 10px 13px; border-radius: 12px; }
+.msg.user { margin-left: auto; color: #ffd9c4; background: rgba(255, 106, 58, 0.14); border: 1px solid rgba(255, 106, 58, 0.3); }
+.msg.bot { color: var(--ink); background: rgba(255, 255, 255, 0.05); border: 1px solid var(--line); }
+.reason { margin-bottom: 10px; padding: 9px 12px; border-radius: 10px; background: rgba(143, 123, 255, 0.06); border: 1px dashed rgba(143, 123, 255, 0.4); }
+.reason-head { display: flex; align-items: center; gap: 8px; font-size: 12.5px; font-weight: 600; letter-spacing: 0.03em; color: var(--violet); }
+.reason-head .caret { transition: transform 0.3s ease; }
+.reason-head .eye { margin-left: auto; font-size: 11px; font-weight: 500; color: var(--faint); letter-spacing: 0; }
+.reason-body { max-height: 0; overflow: hidden; opacity: 0; transition: max-height 0.45s ease, opacity 0.35s ease, margin-top 0.35s ease; }
+.reason-body .spoiler { color: var(--muted); font-size: 12.5px; line-height: 1.5; filter: blur(4px); transition: filter 0.4s ease; }
+.browser:hover .caret { transform: rotate(90deg); }
+.browser:hover .reason-body { max-height: 140px; margin-top: 8px; opacity: 1; }
+.browser:hover .spoiler { filter: blur(0); }
+.browser:hover .eye { color: var(--violet); }
+.browser-hint { margin-top: 14px; text-align: center; font-size: 12px; color: var(--faint); font-style: italic; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+  html { scroll-behavior: auto; }
+  .reveal { opacity: 1; transform: none; }
+}
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add('js');</script>
+
+<!-- ============ nav ============ -->
+<nav class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top">
+      <svg class="flame" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M12 2c1 3.5 4.5 5 4.5 9a4.5 4.5 0 0 1-9 0c0-1.6.6-2.8 1.4-4C9.4 8.6 10 10 11 10.5 10.6 7 11 4.5 12 2Z" fill="url(#fg)"/>
+        <path d="M12 13c.7 1.4 2 2 2 3.7a2 2 0 1 1-4 0c0-1.1.6-1.9 1.2-2.6.1.5.4.9.8.9-.2-.8-.2-1.4 0-2Z" fill="#fff2d9" opacity="0.9"/>
+        <defs><linearGradient id="fg" x1="7" y1="4" x2="17" y2="16"><stop stop-color="#ffb650"/><stop offset="0.55" stop-color="#ff6a3a"/><stop offset="1" stop-color="#ff3d81"/></linearGradient></defs>
+      </svg>
+      Firedreams<span style="color: var(--ember-1);">&nbsp;Studio</span>
+    </a>
+    <div class="nav-links">
+      <a href="#games">Games</a>
+      <a href="#tools">Tools</a>
+      <a href="#about">About</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ============ hero ============ -->
+<header class="hero" id="top">
+  <video muted loop playsinline preload="none" poster="assets/img/campfire_poster.webp" aria-hidden="true" id="heroVideo" data-src="assets/video/campfire3.mp4"></video>
+  <div class="veil"></div>
+  <canvas id="embers"></canvas>
+  <div class="wrap">
+    <div class="hero-content">
+      <span class="eyebrow reveal in">Indie games &amp; apps, made by one person</span>
+      <h1 class="reveal in d1">Small studio.<br /><em class="grad-text">Burning bright.</em></h1>
+      <p class="lede reveal in d2">Firedreams Studio crafts story-rich games and beautifully polished mobile apps. Every pixel placed by hand, every idea kept warm until it is ready.</p>
+      <div class="hero-ctas reveal in d3">
+        <a class="btn btn-fire" href="#games">
+          See what makes us shine
+          <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M8 3v10m0 0 4.5-4.5M8 13 3.5 8.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+  <a class="scroll-hint" href="#games" aria-label="Scroll to our games"><span>Scroll</span><span class="line"></span></a>
+</header>
+
+<!-- ============ games ============ -->
+<section id="games" class="section-pad" aria-labelledby="games-heading">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 class="grad-text reveal" id="games-heading">Games</h2>
+      <p class="reveal d2">Releases, demos and concepts</p>
+    </div>
+    <div class="cards">
+      <div class="card reveal" id="flags">
+        <div class="card-top">
+          <a class="app-icon-link" href="https://play.google.com/store/apps/details?id=studio.firedreams.flagsoftheworld" target="_blank" rel="noopener" aria-label="Get Flags of the World on Google Play">
+            <img class="app-icon" src="assets/img/flags_app/flags_icon.webp" alt="Flags of the World app icon, a globe inside a golden trophy cup with two pennants" width="58" height="58" loading="lazy" />
+          </a>
+          <div>
+            <h3><a class="card-title-link" href="https://play.google.com/store/apps/details?id=studio.firedreams.flagsoftheworld" target="_blank" rel="noopener">Flags of the World<span class="go" aria-hidden="true">&#8599;</span></a></h3>
+            <div class="card-meta"><span class="platform">Android</span><a class="chip" href="https://play.google.com/store/apps/developer?id=firedreams.studio" target="_blank" rel="noopener"><span class="dot ship"></span>Available on Google Play</a></div>
+          </div>
+        </div>
+        <p>A bright, family-friendly flag quiz. 224 flags, three difficulties, sneaky lookalike rounds, arcade-style high scores and a falling-stars celebration when you get a perfect run. Fully offline.</p>
+        <div class="card-visual">
+          <div class="phones" aria-hidden="true">
+            <div class="hiscore">HI-SCORE&nbsp;&nbsp;3000</div>
+            <div class="phone back"><img src="assets/img/flags_app/flags_win.webp" alt="" loading="lazy" width="1080" height="2400" /></div>
+            <div class="phone front"><img src="assets/img/flags_app/flags_q.webp" alt="Flags of the World quiz screen showing a flag and four country choices" loading="lazy" width="1080" height="2400" /></div>
+          </div>
+        </div>
+      </div>
+      <div class="card game-card reveal d1" id="more">
+        <div class="card-top">
+          <div>
+            <h3><a class="card-title-link" href="https://firedreams.itch.io/lily-hop-demo" target="_blank" rel="noopener">Lily Hop<span class="go" aria-hidden="true">&#8599;</span></a></h3>
+            <div class="card-meta"><span class="platform">Pond adventure</span><span class="chip"><span class="dot ship"></span>Playable demo</span></div>
+          </div>
+        </div>
+        <p>A little frog in a beautiful, dangerous pond. Realistic water, natural sound and hungry predators turn a hop between lily pads into a fight for survival.</p>
+        <div class="game-details">
+          <span class="chip award">&#9733; OpenAI Build Week</span>
+          <a class="game-link" href="https://devpost.com/software/lily-hop" target="_blank" rel="noopener">View on Devpost &#8599;</a>
+        </div>
+        <div class="card-visual lily-stage">
+          <div class="lily-frame">
+            <img src="assets/img/lily/lily_predator.webp" alt="Lily Hop: a photoreal frog splashes in dark water as a camouflaged predator rises between two lily pads" width="1400" height="788" loading="lazy" />
+            <span class="lily-ripple"></span>
+            <span class="lily-ripple r2"></span>
+            <span class="lily-tag">Real-time ripples</span>
+          </div>
+          <figure class="lily-sticker">
+            <img src="assets/img/lily/lily_title.webp" alt="Lily Hop title screen over a top-down pond" width="520" height="293" loading="lazy" />
+            <figcaption>Title screen</figcaption>
+          </figure>
+        </div>
+        <a class="btn btn-fire game-play" href="https://firedreams.itch.io/lily-hop-demo" target="_blank" rel="noopener">Play the demo on itch.io &#8599;</a>
+      </div>
+    </div>
+
+    <!-- concept lab -->
+    <div class="lab reveal" id="capybara">
+      <div class="stamp">Concept lab</div>
+      <div>
+        <span class="chip"><span class="dot concept"></span>Very early concept</span>
+        <h3>Capybara Blaster</h3>
+        <p>A cool action game, where you can blast levels apart. Fighting friends and cpu-enemies, Capybara-world will never be the same again. Soon-ish on Steam, Itch.io and Android.</p>
+      </div>
+      <figure class="lab-art">
+        <img src="assets/img/capybara_concept.webp" alt="Capybara Blaster concept art: a capybara in tactical gear aiming a grenade launcher while tanks and rockets cause mayhem in the jungle behind it" width="760" height="760" loading="lazy" />
+        <figcaption>Concept painting #1: negotiations have failed.</figcaption>
+      </figure>
+      <div class="lab-probes reveal d3">
+        <span class="lab-probes-label">In-engine probes</span>
+        <div class="lab-probes-grid">
+          <figure class="probe"><button class="probe-zoom" type="button" aria-haspopup="dialog" aria-label="Enlarge screenshot: Calm before the storm"><img src="assets/img/capybara/capy_aim.webp" alt="Capybara Blaster: capybaras shake their fist at eachother" loading="lazy" width="1920" height="1021" /><span class="probe-hint" aria-hidden="true"><svg width="11" height="11" viewBox="0 0 16 16" fill="none"><path d="M6 2H2v4M10 14h4v-4M2 2l5 5M14 14l-5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Enlarge</span></button><figcaption>Capybara's getting ready to fight</figcaption></figure>
+          <figure class="probe"><button class="probe-zoom" type="button" aria-haspopup="dialog" aria-label="Enlarge screenshot: Weapon selection"><img src="assets/img/capybara/capy_weapons.webp" alt="Capybara Blaster: The weapon selection screen" loading="lazy" width="1920" height="1021" /><span class="probe-hint" aria-hidden="true"><svg width="11" height="11" viewBox="0 0 16 16" fill="none"><path d="M6 2H2v4M10 14h4v-4M2 2l5 5M14 14l-5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Enlarge</span></button><figcaption>Weapons Selection Screen</figcaption></figure>
+          <figure class="probe"><button class="probe-zoom" type="button" aria-haspopup="dialog" aria-label="Enlarge screenshot: Level with new assets"><img src="assets/img/capybara/capy_with_house.webp" alt="Capybara Blaster: new assets" loading="lazy" width="1920" height="1021" /><span class="probe-hint" aria-hidden="true"><svg width="11" height="11" viewBox="0 0 16 16" fill="none"><path d="M6 2H2v4M10 14h4v-4M2 2l5 5M14 14l-5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Enlarge</span></button><figcaption>Showing some of the new assets</figcaption></figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ tools ============ -->
+<section id="tools" class="section-pad" aria-labelledby="tools-heading">
+  <div class="wrap">
+    <div class="section-head" id="mobile">
+      <h2 class="grad-text reveal" id="tools-heading">Tools</h2>
+      <p class="reveal d2">Useful releases on the Google Play Store</p>
+    </div>
+    <div class="cards">
+      <div class="card reveal">
+        <div class="card-top">
+          <a class="app-icon-link" href="https://play.google.com/store/apps/details?id=studio.firedreams.level" target="_blank" rel="noopener" aria-label="Get Bubble Level on Google Play">
+            <img class="app-icon" src="assets/img/bubble_icon.webp" alt="Bubble Level app icon" width="58" height="58" loading="lazy" />
+          </a>
+          <div>
+            <h3><a class="card-title-link" href="https://play.google.com/store/apps/details?id=studio.firedreams.level" target="_blank" rel="noopener">Bubble Level<span class="go" aria-hidden="true">&#8599;</span></a></h3>
+            <div class="card-meta"><span class="platform">Android</span><a class="chip" href="https://play.google.com/store/apps/developer?id=firedreams.studio" target="_blank" rel="noopener"><span class="dot ship"></span>Available on Google Play</a></div>
+          </div>
+        </div>
+        <p>A spirit level that feels like the real thing. Surface, edge and angle modes, a liquid bubble that splits and merges as you move, haptic and sound feedback when you hit level, and calibration you can trust.</p>
+        <div class="card-visual">
+          <div class="phones" aria-hidden="true">
+            <div class="phone back"><img src="assets/img/bubble_surface_dark.webp" alt="" loading="lazy" width="480" height="1029" /></div>
+            <div class="phone front"><img src="assets/img/bubble_edge_light.webp" alt="Bubble Level app, edge mode with liquid bubble vials" loading="lazy" width="480" height="1030" /></div>
+          </div>
+        </div>
+      </div>
+      <div class="card reveal d1" id="multitimer">
+        <div class="card-top">
+          <a class="app-icon-link" href="https://play.google.com/store/apps/details?id=studio.firedreams.multitimerpro" target="_blank" rel="noopener" aria-label="Get MultiTimer Pro on Google Play">
+            <img class="app-icon" src="assets/img/multitimer/multitimer_icon.webp" alt="MultiTimer Pro app icon" width="58" height="58" loading="lazy" />
+          </a>
+          <div>
+            <h3><a class="card-title-link" href="https://play.google.com/store/apps/details?id=studio.firedreams.multitimerpro" target="_blank" rel="noopener">MultiTimer Pro<span class="go" aria-hidden="true">&#8599;</span></a></h3>
+            <div class="card-meta"><span class="platform">Android</span><a class="chip" href="https://play.google.com/store/apps/developer?id=firedreams.studio" target="_blank" rel="noopener"><span class="dot ship"></span>Available on Google Play</a></div>
+          </div>
+        </div>
+        <p>Keep cooking, workouts and focus sessions on their own clock. Nine timer types, from countdowns and Pomodoro to intervals and chess, with colourful progress rings, custom alerts and timers that keep running in the background.</p>
+        <div class="card-visual">
+          <div class="phones" aria-hidden="true">
+            <div class="phone back"><img src="assets/img/multitimer/multitimer_interval.webp" alt="" loading="lazy" width="480" height="960" /></div>
+            <div class="phone front"><img src="assets/img/multitimer/multitimer_dashboard.webp" alt="MultiTimer Pro dashboard with five colourful timers for pasta, tea, focus, HIIT and a stopwatch" loading="lazy" width="480" height="960" /></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- browser tool -->
+    <div class="tools-grid" id="browser-tool">
+      <div class="tools-copy">
+        <span class="eyebrow reveal">Browser tool</span>
+        <h3 class="reveal d1">Keep Reasoning <span class="grad-text">Closed</span></h3>
+        <p class="tools-sub reveal d1">for the llama.cpp web UI</p>
+        <div class="tools-chips reveal d1">
+          <span class="chip"><span class="dot ship"></span>Live on Firefox Add-ons</span>
+          <span class="chip">MIT licensed</span>
+          <span class="chip">Private by design</span>
+        </div>
+        <p class="reveal d2">The llama.cpp web UI pops a model's thinking block open while it writes, spoiling the answer before you reach it. This add-on keeps that block collapsed by default, on every chat and every device.</p>
+        <p class="reveal d2">Click the header to peek whenever you like. It only ever runs on the servers you add yourself, and nothing leaves your browser.</p>
+        <div class="reveal d3">
+          <a class="btn btn-fire" href="https://addons.mozilla.org/en-US/firefox/addon/reasoning-closed-for-llama-cpp/" target="_blank" rel="noopener">
+            Get the add-on
+            <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M5 3h8v8M13 3 3 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="tools-visual reveal d2">
+        <img class="bulb-badge" src="assets/img/tools/bulb.webp" alt="Keep Reasoning Closed add-on icon, a glowing blue light bulb" width="260" height="260" />
+        <div class="browser">
+          <div class="browser-bar">
+            <span class="tl"><i></i><i></i><i></i></span>
+            <span class="url">http://192.168.1.10:8081</span>
+            <img class="ext" src="assets/img/tools/bulb.webp" alt="" width="24" height="24" />
+          </div>
+          <div class="browser-body">
+            <div class="msg user">Write the innkeeper's reply. No spoilers.</div>
+            <div class="msg bot">
+              <div class="reason">
+                <div class="reason-head">
+                  <svg class="caret" width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M3 1l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  Reasoning
+                  <span class="eye">hidden</span>
+                </div>
+                <div class="reason-body">
+                  <p class="spoiler">Keep the thinking folded so the story is spoiler-free. The innkeeper is wary, knows more than he tells, and slides a room key across the bar without meeting their eyes...</p>
+                </div>
+              </div>
+              The innkeeper wipes the counter, glances once at the door, and slides a brass key toward you without a word.
+            </div>
+          </div>
+        </div>
+        <p class="browser-hint">Hover the window to peek at the hidden reasoning.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ about ============ -->
+<section id="about" class="section-pad">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="about-copy">
+        <span class="eyebrow reveal">About the studio</span>
+        <h2 class="reveal d1" style="font-size: clamp(32px, 4.6vw, 52px); margin: 18px 0 22px;">One fire.<br /><span class="grad-text">One dream.</span></h2>
+        <p class="reveal d2">Firedreams Studio is a one-person indie studio. Design, code, art and story all come from the same pair of hands, which keeps every project personal.</p>
+        <p class="reveal d2">More to be announced soon.</p>
+        <div class="about-stats reveal d3">
+          <div class="stat"><b class="grad-text">1</b><span>Developer</span></div>
+          <div class="stat"><b class="grad-text">6</b><span>Projects</span></div>
+          <div class="stat"><b class="grad-text">&infin;</b><span>Late nights</span></div>
+        </div>
+      </div>
+      <div class="about-visual reveal d2">
+        <video muted loop playsinline preload="none" poster="assets/img/campfire_poster.webp" aria-hidden="true" id="aboutVideo" data-src="assets/video/campfire1.mp4"></video>
+        <img class="badge-float" src="assets/img/firedreams_logo_280.webp" alt="Firedreams Studio campfire badge" width="118" height="118" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ footer ============ -->
+<footer>
+  <div class="wrap foot">
+    <div class="foot-links">
+      <a href="mailto:dream@firedreams.studio">Contact</a>
+      <a href="documents/bubble_level_privacy_policy.txt">Privacy policy</a>
+    </div>
+    <div class="copy">&copy; <span id="year">2026</span> Firedreams Studio</div>
+  </div>
+</footer>
+
+<!-- screenshot lightbox (shared by the capybara probes) -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Capybara Blaster screenshots" hidden>
+  <div class="lb-backdrop" data-lb-close></div>
+  <button class="lb-btn lb-close" type="button" data-lb-close aria-label="Close viewer">
+    <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M3 3l10 10M13 3 3 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+  </button>
+  <button class="lb-btn lb-nav lb-prev" type="button" aria-label="Previous screenshot">
+    <svg width="17" height="17" viewBox="0 0 16 16" fill="none"><path d="M10 2 4 8l6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+  <figure class="lb-stage">
+    <img id="lbImg" src="" alt="">
+    <figcaption class="lb-caption"><span class="lb-count" id="lbCount"></span><span id="lbCap"></span></figcaption>
+  </figure>
+  <button class="lb-btn lb-nav lb-next" type="button" aria-label="Next screenshot">
+    <svg width="17" height="17" viewBox="0 0 16 16" fill="none"><path d="m6 2 6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+</div>
+
+<script>
+// footer year
+document.getElementById('year').textContent = new Date().getFullYear();
+
+// nav background on scroll
+const nav = document.getElementById('nav');
+addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 30), { passive: true });
+
+// reveal on scroll
+const io = new IntersectionObserver(entries => {
+  for (const e of entries) if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+}, { threshold: 0.15 });
+document.querySelectorAll('.reveal:not(.in)').forEach(el => io.observe(el));
+
+// videos: skip loading on save-data / slow connections, posters stay visible
+const conn = navigator.connection || {};
+const lowData = conn.saveData || /(^|-)2g$/.test(conn.effectiveType || '');
+const enableVideo = v => {
+  if (!v.dataset.src) return;
+  const src = document.createElement('source');
+  src.type = 'video/mp4';
+  src.src = v.dataset.src;
+  delete v.dataset.src;
+  v.append(src);
+  v.load();
+};
+const heroVideo = document.getElementById('heroVideo');
+if (!lowData) { enableVideo(heroVideo); heroVideo.play().catch(() => {}); }
+
+// about video: play only when visible
+const av = document.getElementById('aboutVideo');
+new IntersectionObserver(entries => {
+  if (lowData) return;
+  if (entries[0].isIntersecting) { enableVideo(av); av.play().catch(() => {}); } else av.pause();
+}, { threshold: 0.25 }).observe(av);
+
+// ember particles over the hero
+const canvas = document.getElementById('embers');
+const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+if (!reduceMotion) {
+  const ctx = canvas.getContext('2d');
+  let w, h, embers = [];
+  const hero = canvas.parentElement;
+  const resize = () => { w = canvas.width = hero.clientWidth; h = canvas.height = hero.clientHeight; };
+  addEventListener('resize', resize); resize();
+  const spawn = () => ({
+    x: w * (0.3 + Math.random() * 0.4),
+    y: h * (0.75 + Math.random() * 0.25),
+    r: 0.8 + Math.random() * 2.2,
+    vy: 0.35 + Math.random() * 0.85,
+    vx: (Math.random() - 0.5) * 0.4,
+    sway: Math.random() * Math.PI * 2,
+    life: 0,
+    max: 260 + Math.random() * 200,
+    hue: 18 + Math.random() * 26
+  });
+  for (let i = 0; i < 26; i++) { const e = spawn(); e.life = Math.random() * e.max; embers.push(e); }
+  (function tick() {
+    ctx.clearRect(0, 0, w, h);
+    for (const e of embers) {
+      e.life++;
+      e.y -= e.vy; e.sway += 0.02;
+      e.x += e.vx + Math.sin(e.sway) * 0.3;
+      const t = e.life / e.max;
+      const alpha = t < 0.15 ? t / 0.15 : 1 - (t - 0.15) / 0.85;
+      ctx.beginPath();
+      ctx.arc(e.x, e.y, e.r, 0, Math.PI * 2);
+      ctx.fillStyle = `hsla(${e.hue}, 100%, 62%, ${Math.max(alpha, 0) * 0.8})`;
+      ctx.shadowColor = 'rgba(255,120,50,0.8)';
+      ctx.shadowBlur = 8;
+      ctx.fill();
+      if (e.life >= e.max || e.y < -10) Object.assign(e, spawn(), { y: h * (0.85 + Math.random() * 0.15), life: 0 });
+    }
+    requestAnimationFrame(tick);
+  })();
+}
+
+// screenshot lightbox for the capybara probes
+const lightbox = document.getElementById('lightbox');
+const lbImg = document.getElementById('lbImg');
+const lbCap = document.getElementById('lbCap');
+const lbCount = document.getElementById('lbCount');
+const shots = [...document.querySelectorAll('.probe-zoom')];
+let shotCur = 0, shotFocus = null;
+
+const showShot = i => {
+  shotCur = (i + shots.length) % shots.length;
+  const thumb = shots[shotCur].querySelector('img');
+  lbImg.src = thumb.src; // same file as the thumbnail, so it swaps instantly from cache
+  lbImg.alt = thumb.alt;
+  lbCap.textContent = shots[shotCur].closest('.probe').querySelector('figcaption').textContent;
+  lbCount.textContent = (shotCur + 1) + ' / ' + shots.length;
+  if (!reduceMotion) lbImg.animate(
+    [{ opacity: 0, transform: 'scale(0.965)' }, { opacity: 1, transform: 'none' }],
+    { duration: 240, easing: 'cubic-bezier(0.2, 0.8, 0.3, 1)' }
+  );
+};
+const openLightbox = i => {
+  shotFocus = document.activeElement;
+  showShot(i);
+  lightbox.hidden = false;
+  document.body.classList.add('no-scroll');
+  document.querySelector('.lb-close').focus();
+};
+const closeLightbox = () => {
+  lightbox.hidden = true;
+  document.body.classList.remove('no-scroll');
+  if (shotFocus) shotFocus.focus();
+};
+
+shots.forEach((btn, i) => btn.addEventListener('click', () => openLightbox(i)));
+document.querySelector('.lb-prev').addEventListener('click', () => showShot(shotCur - 1));
+document.querySelector('.lb-next').addEventListener('click', () => showShot(shotCur + 1));
+lightbox.addEventListener('click', e => { if (e.target.closest('[data-lb-close]')) closeLightbox(); });
+addEventListener('keydown', e => {
+  if (lightbox.hidden) return;
+  if (e.key === 'Escape') closeLightbox();
+  else if (e.key === 'ArrowLeft') showShot(shotCur - 1);
+  else if (e.key === 'ArrowRight') showShot(shotCur + 1);
+});
+let swipeX = null;
+lightbox.addEventListener('touchstart', e => { swipeX = e.touches[0].clientX; }, { passive: true });
+lightbox.addEventListener('touchend', e => {
+  if (swipeX === null) return;
+  const dx = e.changedTouches[0].clientX - swipeX;
+  if (Math.abs(dx) > 40) showShot(shotCur + (dx < 0 ? 1 : -1));
+  swipeX = null;
+}, { passive: true });
+</script>
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "de424a85e3134b8ba483898fb1dfaf1b"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>

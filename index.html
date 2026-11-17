@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Firedreams Studio, handcrafted games and apps</title>
-<meta name="description" content="Firedreams Studio is a one-person indie studio crafting story-rich games and beautifully polished mobile apps. Home of Bubble Level, Flags of the World, MultiTimer Pro, the Lily Hop game jam entry and the Keep Reasoning Closed Firefox add-on." />
+<meta name="description" content="Firedreams Studio is a one-person indie studio crafting story-rich games and beautifully polished mobile apps. Home of Animal Treasure, Bubble Level, Flags of the World, MultiTimer Pro, the Lily Hop game jam entry and the Keep Reasoning Closed Firefox add-on." />
 <link rel="canonical" href="https://firedreams.studio/" />
 <meta property="og:site_name" content="Firedreams Studio" />
 <meta property="og:title" content="Firedreams Studio" />
@@ -279,6 +279,15 @@ section { position: relative; }
   box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
 
+/* featured release: full-width card, copy left, phones rising from the bottom edge on the right */
+.card.feature { grid-column: 1 / -1; display: grid; grid-template-columns: 1.15fr 1fr; gap: 0 40px; }
+.feature-copy { padding-bottom: 40px; }
+.feature .card-visual { align-self: end; }
+.feature .phones { height: 330px; }
+.facts { display: flex; flex-wrap: wrap; gap: 8px; margin: 4px 0 20px; }
+.facts .chip { padding: 4px 12px; font-size: 12.5px; }
+@media (max-width: 880px) { .card.feature { grid-template-columns: 1fr; } .feature-copy { padding-bottom: 0; } .feature .phones { height: 300px; } }
+
 /* ============ concept lab ============ */
 .lab {
   border: 1px dashed rgba(86, 220, 178, 0.35);
@@ -530,7 +539,34 @@ body.no-scroll { overflow: hidden; }
       <p class="reveal d2">Releases, demos and concepts</p>
     </div>
     <div class="cards">
-      <div class="card reveal" id="flags">
+      <div class="card feature reveal" id="animal-treasure">
+        <div class="feature-copy">
+          <div class="card-top">
+            <a class="app-icon-link" href="https://play.google.com/store/apps/details?id=studio.firedreams.animalfinder" target="_blank" rel="noopener" aria-label="Get Animal Treasure on Google Play">
+              <img class="app-icon" src="assets/img/animal_treasure/animal_treasure_icon.webp" alt="Animal Treasure app icon, a cow, a pig and a sheep in bubbles above a treasure chest full of gold" width="58" height="58" loading="lazy" />
+            </a>
+            <div>
+              <h3><a class="card-title-link" href="https://play.google.com/store/apps/details?id=studio.firedreams.animalfinder" target="_blank" rel="noopener">Animal Treasure<span class="go" aria-hidden="true">&#8599;</span></a></h3>
+              <div class="card-meta"><span class="platform">Android</span><a class="chip" href="https://play.google.com/store/apps/details?id=studio.firedreams.animalfinder" target="_blank" rel="noopener"><span class="dot ship"></span>New on Google Play</a></div>
+            </div>
+          </div>
+          <p>A gentle animal game for toddlers. Real photos, real animal sounds and a friendly voice that says everything out loud. Tap and hear, find it, learn to read, puzzles, memory, where-do-they-live and a treasure hunt, plus a sticker book that fills up as they play. Five difficulty levels that grow with your child, and no way to lose.</p>
+          <div class="facts">
+            <span class="chip">354 animals</span>
+            <span class="chip">9 games</span>
+            <span class="chip">12 languages</span>
+            <span class="chip">No ads, no data, offline</span>
+          </div>
+          <a class="game-link" href="https://www.youtube.com/watch?v=vk6CZ0ewwec" target="_blank" rel="noopener">Watch the trailer &#8599;</a>
+        </div>
+        <div class="card-visual">
+          <div class="phones" aria-hidden="true">
+            <div class="phone back"><img src="assets/img/animal_treasure/animal_treasure_home.webp" alt="" loading="lazy" width="560" height="995" /></div>
+            <div class="phone front"><img src="assets/img/animal_treasure/animal_treasure_find.webp" alt="" loading="lazy" width="560" height="995" /></div>
+          </div>
+        </div>
+      </div>
+      <div class="card reveal d1" id="flags">
         <div class="card-top">
           <a class="app-icon-link" href="https://play.google.com/store/apps/details?id=studio.firedreams.flagsoftheworld" target="_blank" rel="noopener" aria-label="Get Flags of the World on Google Play">
             <img class="app-icon" src="assets/img/flags_app/flags_icon.webp" alt="Flags of the World app icon, a globe inside a golden trophy cup with two pennants" width="58" height="58" loading="lazy" />
@@ -549,7 +585,7 @@ body.no-scroll { overflow: hidden; }
           </div>
         </div>
       </div>
-      <div class="card game-card reveal d1" id="more">
+      <div class="card game-card reveal d2" id="more">
         <div class="card-top">
           <div>
             <h3><a class="card-title-link" href="https://firedreams.itch.io/lily-hop-demo" target="_blank" rel="noopener">Lily Hop<span class="go" aria-hidden="true">&#8599;</span></a></h3>
@@ -709,7 +745,7 @@ body.no-scroll { overflow: hidden; }
         <p class="reveal d2">More to be announced soon.</p>
         <div class="about-stats reveal d3">
           <div class="stat"><b class="grad-text">1</b><span>Developer</span></div>
-          <div class="stat"><b class="grad-text">6</b><span>Projects</span></div>
+          <div class="stat"><b class="grad-text">7</b><span>Projects</span></div>
           <div class="stat"><b class="grad-text">&infin;</b><span>Late nights</span></div>
         </div>
       </div>

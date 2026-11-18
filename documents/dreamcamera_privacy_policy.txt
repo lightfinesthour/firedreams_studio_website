@@ -1,7 +1,7 @@
 PRIVACY POLICY FOR DREAMCAMERA
 ==============================
 
-App:         DreamCamera (studio.firedreams.dreamcamera)
+App:         DreamCamera Pro (studio.firedreams.dreamcamera)
 Developer:   Firedreams Studio
 Contact:     dream@firedreams.studio
 Effective:   18 November 2026
@@ -10,7 +10,7 @@ Last update: 18 November 2026
 
 SUMMARY
 -------
-DreamCamera collects no data. Your photos never leave your device unless
+DreamCamera Pro collects no data. Your photos never leave your device unless
 you share them yourself. The app has no internet access, no accounts,
 no ads, no analytics, no tracking, and no third-party services.
 
@@ -19,7 +19,7 @@ DETAILS
 -------
 
 1. Data collection
-   DreamCamera does not collect, store on any server, or transmit any
+   DreamCamera Pro does not collect, store on any server, or transmit any
    personal data or any other data. The app does not request the
    internet permission, so it is technically unable to send anything
    off your device.

@@ -1,0 +1,63 @@
+PRIVACY POLICY FOR DREAMCAMERA
+==============================
+
+App:         DreamCamera (studio.firedreams.dreamcamera)
+Developer:   Firedreams Studio
+Contact:     dream@firedreams.studio
+Effective:   18 November 2026
+Last update: 18 November 2026
+
+
+SUMMARY
+-------
+DreamCamera collects no data. Your photos never leave your device unless
+you share them yourself. The app has no internet access, no accounts,
+no ads, no analytics, no tracking, and no third-party services.
+
+
+DETAILS
+-------
+
+1. Data collection
+   DreamCamera does not collect, store on any server, or transmit any
+   personal data or any other data. The app does not request the
+   internet permission, so it is technically unable to send anything
+   off your device.
+
+2. Camera
+   The app uses the camera to show the viewfinder and take photos.
+   The images are processed on your device only.
+
+3. Photos
+   Photos you take or import are stored in the app's private storage on
+   your device, so you can redevelop them later. When you choose "Save
+   to Photos" or turn on automatic saving, a copy is written to your
+   device's photo gallery (album "DreamCamera"). Photos you import are
+   read from your gallery only when you pick them.
+
+4. Settings
+   Your preferences (such as favourite gear, kits and settings) are
+   stored locally on your device only.
+
+5. Deleting your data
+   Delete photos inside the app (they stay in "Recently deleted" for 30
+   days, or delete them forever there), or uninstall the app to remove
+   everything it stored. Copies you saved to your gallery stay there
+   until you delete them.
+
+6. Third parties
+   The app contains no advertising, no analytics, and no third-party
+   code that collects data. Your purchase of the app is handled entirely
+   by Google Play; see Google's privacy policy for how Google processes
+   payments.
+
+7. Children
+   The app does not collect personal data from anyone, including
+   children.
+
+8. Changes
+   If this policy ever changes, the new version will be published at
+   this same address with an updated date.
+
+9. Contact
+   Questions? Email dream@firedreams.studio.
